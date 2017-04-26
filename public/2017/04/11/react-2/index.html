@@ -1,0 +1,1237 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
+				alert('密码错误！');
+				history.back();
+			}
+		}
+	})();
+</script>
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript,react," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="小鸟依家" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/./favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="React的四个概念简单介绍React主要有四个主要概念构成，下面分别来介绍一下： ###Virtual DOM  虚拟DOM是React的基石。   之所以引入虚拟DOM，一方面是性能的考虑。Web应用和网站不同，一个Web应用 中通常会在单页内有大量的DOM操作，而这些DOM操作很慢。 在React中，应用程序在虚拟DOM上操作，这让React有了优化的机会。简单说， React在每次需要渲染">
+<meta name="keywords" content="JavaScript,react">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React的四个概念简单介绍">
+<meta property="og:url" content="http://yoursite.com/2017/04/11/react-2/index.html">
+<meta property="og:site_name" content="小鸟依家">
+<meta property="og:description" content="React的四个概念简单介绍React主要有四个主要概念构成，下面分别来介绍一下： ###Virtual DOM  虚拟DOM是React的基石。   之所以引入虚拟DOM，一方面是性能的考虑。Web应用和网站不同，一个Web应用 中通常会在单页内有大量的DOM操作，而这些DOM操作很慢。 在React中，应用程序在虚拟DOM上操作，这让React有了优化的机会。简单说， React在每次需要渲染">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4071931-f4a4f89fb9057ad6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4071931-2a9c9141d3171550.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4071931-91e028ba04406cc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4071931-98d4bc48bbd0b369.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4071931-604b4c06682a5d3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4071931-7d7e819922568908.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-04-11T04:02:38.013Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React的四个概念简单介绍">
+<meta name="twitter:description" content="React的四个概念简单介绍React主要有四个主要概念构成，下面分别来介绍一下： ###Virtual DOM  虚拟DOM是React的基石。   之所以引入虚拟DOM，一方面是性能的考虑。Web应用和网站不同，一个Web应用 中通常会在单页内有大量的DOM操作，而这些DOM操作很慢。 在React中，应用程序在虚拟DOM上操作，这让React有了优化的机会。简单说， React在每次需要渲染">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4071931-f4a4f89fb9057ad6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/11/react-2/"/>
+
+
+
+
+
+  <title> React的四个概念简单介绍 | 小鸟依家 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?442b6593262ef36692e6df04a7c9dc57";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小鸟依家</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">前端开发</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-book">
+          <a href="/book" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            书籍
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/11/react-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小鳥依家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/a.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小鸟依家">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                React的四个概念简单介绍
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T12:01:16+08:00">
+                2017-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端主流框架/" itemprop="url" rel="index">
+                    <span itemprop="name">前端主流框架</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端主流框架/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/04/11/react-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/11/react-2/" class="leancloud_visitors" data-flag-title="React的四个概念简单介绍">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="React的四个概念简单介绍"><a href="#React的四个概念简单介绍" class="headerlink" title="React的四个概念简单介绍"></a>React的四个概念简单介绍</h1><p><strong>React主要有四个主要概念构成，下面分别来介绍一下：</strong></p>
+<p>###Virtual DOM</p>
+<ol>
+<li>虚拟DOM是React的基石。</li>
+</ol>
+<ul>
+<li>之所以引入虚拟DOM，一方面是性能的考虑。Web应用和网站不同，一个Web应用 中通常会在单页内有大量的DOM操作，而这些DOM操作很慢。</li>
+<li>在React中，应用程序在虚拟DOM上操作，这让React有了优化的机会。简单说， React在每次需要渲染时，会先比较当前DOM内容和待渲染内容的差异， 然后再决定如何最优地更新DOM。这个过程被称为reconciliation。</li>
+<li>除了性能的考虑，React引入虚拟DOM更重要的意义是提供了一种一致的开发方 式来开发服务端应用、Web应用和手机端应用：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4071931-f4a4f89fb9057ad6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片2.png"></p>
+<blockquote>
+<p>因为有了虚拟DOM这一层，所以通过配备不同的渲染器，就可以将虚拟DOM的内容 渲染到不同的平台。而应用开发者，使用JavaScript就可以通吃各个平台了。相当棒的思路！</p>
+</blockquote>
+<ol>
+<li>Virtual DOM速度快的说明<blockquote>
+<p>在Web开发中，我们总需要将变化的数据实时反应到UI上，这时就需要对DOM进行操作。而复杂或频繁的DOM操作通常是性能瓶颈产生的原因（如何 进行高性能的复杂DOM操作通常是衡量一个前端开发人员技能的重要指标）。React为此引入了虚拟DOM（Virtual DOM）的机制：在浏览器端用Javascript实现了一套DOM API。基于React进行开发时所有的DOM构造都是通过虚拟DOM进行，每当数据变化时，React都会重新构建整个DOM树，然后React将当前 整个DOM树和上一次的DOM树进行对比，得到DOM结构的区别，然后仅仅将需要变化的部分进行实际的浏览器DOM更新。而且React能够批处理虚拟 DOM的刷新，在一个事件循环（Event Loop）内的两次数据变化会被合并，例如你连续的先将节点内容从A变成B，然后又从B变成A，React会认为UI不发生任何变化，而如果通过手动控 制，这种逻辑通常是极其复杂的。尽管每一次都需要构造完整的虚拟DOM树，但是因为<strong>虚拟DOM是内存数据，性能是极高的，而对实际DOM进行操作的仅仅是 Diff部分，因而能达到提高性能的目的。</strong>这样，在保证性能的同时，开发者将不再需要关注某个数据的变化如何更新到一个或多个具体的DOM元素，而只需要 关心在任意一个数据状态下，整个界面是如何Render的。<a href="http://blog.csdn.net/yczz/article/details/49585313" target="_blank" rel="external">详情查看</a></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="React组件"><a href="#React组件" class="headerlink" title="React组件"></a>React组件</h3><ul>
+<li>组件化概念<blockquote>
+<ol>
+<li>虚拟DOM(virtual-dom)不仅带来了简单的UI开发逻辑，同时也带来了组件化开发的思想，所谓组件，即封装起来的具有独立功能的UI部 件。React推荐以组件的方式去重新思考UI构成，将UI上每一个功能相对独立的模块定义成组件，然后将小的组件通过组合或者嵌套的方式构成大的组件， 最终完成整体UI的构建。例如，Facebook的instagram.com整站都采用了React来开发，整个页面就是一个大的组件，其中包含了嵌套 的大量其它组件，大家有兴趣可以看下它背后的代码。</li>
+<li>如果说MVC的思想让你做到视图-数据-控制器的分离，那么组件化的思考方式则是带来了UI功能模块之间的分离。我们通过一个典型的Blog评论界面来看MVC和组件化开发思路的区别</li>
+<li>对于MVC开发模式来说，开发者将三者定义成不同的类，实现了表现，数据，控制的分离。开发者更多的是从技术的角度来对UI进行拆分，实现松耦合。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>对于React而言，则完全是一个新的思路，开发者从功能的角度出发，将<strong>UI分成不同的组件，每个组件都独立封装。</strong><br>在React中，你按照界面模块自然划分的方式来组织和编写你的代码，对于评论界面而言，整个UI是一个通过小组件构成的大组件，每个组件只关心自己部分的逻辑，彼此独立。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4071931-2a9c9141d3171550.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4071931-91e028ba04406cc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<ul>
+<li>组件化开发特性<br>React认为一个组件应该具有如下特征：</li>
+</ul>
+<ol>
+<li><strong>可组合（Composeable）</strong>：一个组件易于和其它组件一起使用，或者嵌套在另一个组件内部。如果一个组件内部创建了另一个组件，那么说父组件拥有（own）它创建的子组件，通过这个特性，一个复杂的UI可以拆分成多个简单的UI组件；</li>
+<li><strong>可重用（Reusable）</strong>：每个组件都是具有独立功能的，它可以被使用在多个UI场景；</li>
+<li><strong>可维护（Maintainable）</strong>：每个小的组件仅仅包含自身的逻辑，更容易被理解和维护；</li>
+<li><strong>可测试（Testable）</strong>：因为每个组件都是独立的，那么对于各个组件分别测试显然要比对于整个UI进行测试容易的多。</li>
+</ol>
+<ul>
+<li>组件定义<br>在React中定义一个组件也是相当的容易，组件就是一个 实现预定义接口的JavaScript类：</li>
+</ul>
+<ol>
+<li>组件渲染<blockquote>
+<p>ReactDOM.render 是 React 的最基本方法，用于将模板转为 HTML 语言，并插入指定的 DOM 节点。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>,</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>)</div><div class="line">  );</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p>而这个方法， 必须而且只能返回一个有效的React元素。这意味着，如果你的组件是由多个元素构成的，那么你必须在外边包一个顶层 元素，然后返回这个顶层元素。比如我们创建一个布局组件：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">render:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> React.createElement(</div><div class="line">        <span class="string">"div"</span>,<span class="literal">null</span>,</div><div class="line">        React.createElement(<span class="string">"div"</span>,<span class="literal">null</span>,<span class="string">"header"</span>),</div><div class="line">        React.createElement(<span class="string">"div"</span>,<span class="literal">null</span>,<span class="string">"content"</span>),</div><div class="line">        React.createElement(<span class="string">"div"</span>,<span class="literal">null</span>,<span class="string">"footer"</span>)</div><div class="line">    );</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>ES5方式定义组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">"use strict"</span>;</div><div class="line"><span class="keyword">var</span> HelloMessage = React.createClass(&#123;</div><div class="line">  <span class="attr">displayName</span>: <span class="string">"HelloMessage"</span>,</div><div class="line"><span class="attr">render</span>: <span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> React.createElement(</div><div class="line">      <span class="string">"div"</span>,</div><div class="line">      <span class="literal">null</span>,</div><div class="line">      <span class="string">"Hello "</span>,</div><div class="line">      <span class="keyword">this</span>.props.name</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">  &#125;);</div><div class="line">ReactDOM.render(React.createElement(HelloMessage, &#123; <span class="attr">name</span>: <span class="string">"John"</span> &#125;), mountNode);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Jsx中定义组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> HelloMessage = React.createClass(&#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">HelloMessage</span> <span class="attr">name</span>=<span class="string">"John"</span> /&gt;</span>, mountNode);</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>ES6中定义组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="string">'./Hello.css'</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">'./Hello.scss'</span>;</div><div class="line"><span class="keyword">import</span> React, &#123;Component&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="comment">// 内联样式</span></div><div class="line"><span class="keyword">let</span> style=&#123;</div><div class="line">    <span class="attr">backgroundColor</span>:<span class="string">'blue'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.state = &#123; <span class="attr">count</span>: <span class="string">'es6'</span>&#125;;</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">                <span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&#123;style&#125;</span>&gt;</span>Hello world&#123;this.state.count&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">image</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        )</div><div class="line">            &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>5 注意事项</p>
+<p>（1）你的React组件名称的首字母应当大写，关于大小写的差异你会在后面发现。<br>（2）你应该会注意到div元素的样式类是用 className而不是class声明的，这是因为class 是JavaScript的保留字，渲染后，真实的DOM还会是：</p>
+<blockquote>
+<p><code>&lt;div class=&quot;ez-led&quot;&gt;Hello, React!&lt;/div&gt;</code></p>
+</blockquote>
+<h3 id="Jsx语法"><a href="#Jsx语法" class="headerlink" title="Jsx语法"></a>Jsx语法</h3><ul>
+<li><p>什么是jsx</p>
+<blockquote>
+<p>在用React写组件的时候，通常会用到JSX语法，粗看上去，像是在Javascript代码里直接写起了XML标签，实质上这只是一个语法糖，每一个 XML标签都会被JSX转换工具转换成纯Javascript代码，当然你想直接使用纯Javascript代码写也是可以的，只是<strong>利用JSX，组件的结 构和组件之间的关系看上去更加清晰</strong></p>
+</blockquote>
+</li>
+<li><p>Jsx语法使用<br>HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写。</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> names = [<span class="string">'Alice'</span>, <span class="string">'Emily'</span>, <span class="string">'Kate'</span>];</div><div class="line">ReactDOM.render(</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">  &#123;</div><div class="line">    names.map(function (name) &#123;</div><div class="line">      return <span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello, &#123;name&#125;!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>,</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
+<p><strong>上面代码体现了 JSX 的基本语法规则：遇到 HTML 标签（以 &lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析。</strong></p>
+<hr>
+<p>JSX 允许直接在模板插入 JavaScript 变量。如果这个变量是一个数组，则会展开这个数组的所有成员<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var arr = [</div><div class="line">  &lt;h1&gt;Hello world!&lt;/h1&gt;,</div><div class="line">  &lt;h2&gt;React is awesome&lt;/h2&gt;,</div><div class="line">];</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;div&gt;&#123;arr&#125;&lt;/div&gt;,</div><div class="line">  document.getElementById('example')</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>上面代码的arr变量是一个数组，结果 JSX 会把它的所有成员，添加到模板，运行结果如下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4071931-98d4bc48bbd0b369.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="Data-Flow（单向数据流）"><a href="#Data-Flow（单向数据流）" class="headerlink" title="Data Flow（单向数据流）"></a>Data Flow（单向数据流）</h3><ul>
+<li>传统的mvc</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4071931-604b4c06682a5d3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>到了 Flux 当中, 除了名字改变了, 重要的是大量的 Model 归到了 Store, View 也统一了,从而得到了所谓单向的数据流, 就是 Model 和 View 之间关系非常清晰了。这样需要人为管理的状态就一下少了很多, 结果体现在开发应用的效率当中:</p>
+<ul>
+<li>Flux </li>
+</ul>
+<ol>
+<li>详细学习地址：<a href="https://hulufei.gitbooks.io/react-tutorial/content/flux.html" target="_blank" rel="external">https://hulufei.gitbooks.io/react-tutorial/content/flux.html</a></li>
+<li>React 标榜自己是 MVC 里面 V 的部分，那么 Flux 就相当于添加 M 和 C 的部分，Flux 是 Facebook 使用的一套前端应用的架构模式。</li>
+<li>一个 Flux 应用主要包含四个部分：<pre><code>1. dispatcher 处理动作分发，维护 Store 之间的依赖关系
+2. stores  数据和逻辑部分
+3. views  React 组件，这一层可以看作 controller-views，作为视图同时响应用户交互
+4. actions  提供给 dispatcher 传递数据给 store
+</code></pre></li>
+<li>单向数据流<br>先来了解一下 Flux 的核心“单向数据流“怎么运作的：<br>Action -&gt; Dispatcher -&gt; Store -&gt; View<br>更多时候 View 会通过用户交互触发 Action，所以一个简单完整的数据流类似这样：</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/4071931-7d7e819922568908.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>整个流程如下：</p>
+<ol>
+<li>首先要有 action，通过定义一些 action creator 方法根据需要创建 Action 提供给 dispatcher</li>
+<li>View 层通过用户交互（比如 onClick）会触发 Action</li>
+<li>Dispatcher 会分发触发的 Action 给所有注册的 Store 的回调函数</li>
+<li>Store 回调函数根据接收的 Action 更新自身数据之后会触发一个 change 事件通知 View 数据更改了</li>
+<li>View 会监听这个 change 事件，拿到对应的新数据并调用 setState 更新组件 UI<br>所有的状态都由 Store 来维护，通过 Action 传递数据，构成了如上所述的单向数据流循环，所以应用中的各部分分工就相当明确，高度解耦了。<br>这种单向数据流使得整个系统都是透明可预测的。<br>###Redux<br>Redux官方中文文档：<a href="http://camsong.github.io/redux-in-chinese/index.html" target="_blank" rel="external">http://camsong.github.io/redux-in-chinese/index.html</a></li>
+</ol>
+<p>Reflux：<a href="https://segmentfault.com/a/1190000002793786?utm_source=tuicool" target="_blank" rel="external">https://segmentfault.com/a/1190000002793786?utm_source=tuicool</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="小鳥依家 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="小鳥依家 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/react/" rel="tag"># react</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/11/react/" rel="next" title="react">
+                <i class="fa fa-chevron-left"></i> react
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/11/react-1/" rel="prev" title="React快速开始+Recat主要知识内容">
+                React快速开始+Recat主要知识内容 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/a.jpg"
+               alt="小鳥依家" />
+          <p class="site-author-name" itemprop="name">小鳥依家</p>
+           
+              <p class="site-description motion-element" itemprop="description">今天你足够努力了吗!?</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#React的四个概念简单介绍"><span class="nav-number">1.</span> <span class="nav-text">React的四个概念简单介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#React组件"><span class="nav-number">1.0.1.</span> <span class="nav-text">React组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jsx语法"><span class="nav-number">1.0.2.</span> <span class="nav-text">Jsx语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Flow（单向数据流）"><span class="nav-number">1.0.3.</span> <span class="nav-text">Data Flow（单向数据流）</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鳥依家</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "dcbbeb86db9a445fa2d41eed4e5da6f2",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("gnW1qdaB0A8IuuhYL0nv0GfD-gzGzoHsz", "7rlhnS8S5bti9GaH1CzM1kv2");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

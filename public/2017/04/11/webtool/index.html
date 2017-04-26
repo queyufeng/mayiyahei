@@ -1,0 +1,1838 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	(function(){
+		if(''){
+			if (prompt('请输入文章密码','') !== ''){
+				alert('密码错误！');
+				history.back();
+			}
+		}
+	})();
+</script>
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="小鸟依家,web前端,前端开发师,程序员" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="小鸟依家" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/./favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="一些前端开发的干货@(前端乱炖) 标签（空格分隔）： 资料 出处:https://coding.net/u/f2e/p/Books/git/tree/master/%E7%A7%BB%E5%8A%A8Web包含pc端,移动端js库,框架,css框架,工具等等…在原文基础上添加修改 有些虽已经年代久远，但仍然可以学到很多有用的东西,可以整理资料的链接和其他链接资料或许有重复……–&amp;gt;&amp;gt;另外">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webtool">
+<meta property="og:url" content="http://yoursite.com/2017/04/11/webtool/index.html">
+<meta property="og:site_name" content="小鸟依家">
+<meta property="og:description" content="一些前端开发的干货@(前端乱炖) 标签（空格分隔）： 资料 出处:https://coding.net/u/f2e/p/Books/git/tree/master/%E7%A7%BB%E5%8A%A8Web包含pc端,移动端js库,框架,css框架,工具等等…在原文基础上添加修改 有些虽已经年代久远，但仍然可以学到很多有用的东西,可以整理资料的链接和其他链接资料或许有重复……–&amp;gt;&amp;gt;另外">
+<meta property="og:updated_time" content="2017-04-11T05:33:38.929Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="webtool">
+<meta name="twitter:description" content="一些前端开发的干货@(前端乱炖) 标签（空格分隔）： 资料 出处:https://coding.net/u/f2e/p/Books/git/tree/master/%E7%A7%BB%E5%8A%A8Web包含pc端,移动端js库,框架,css框架,工具等等…在原文基础上添加修改 有些虽已经年代久远，但仍然可以学到很多有用的东西,可以整理资料的链接和其他链接资料或许有重复……–&amp;gt;&amp;gt;另外">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/11/webtool/"/>
+
+
+
+
+
+  <title> webtool | 小鸟依家 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?442b6593262ef36692e6df04a7c9dc57";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小鸟依家</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">前端开发</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-book">
+          <a href="/book" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            书籍
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/11/webtool/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小鳥依家">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/a.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小鸟依家">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                webtool
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T13:19:23+08:00">
+                2017-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/04/11/webtool/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/11/webtool/" class="leancloud_visitors" data-flag-title="webtool">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一些前端开发的干货"><a href="#一些前端开发的干货" class="headerlink" title="一些前端开发的干货"></a>一些前端开发的干货</h1><p>@(前端乱炖)</p>
+<p>标签（空格分隔）： 资料</p>
+<h3 id="出处-https-coding-net-u-f2e-p-Books-git-tree-master-E7-A7-BB-E5-8A-A8Web"><a href="#出处-https-coding-net-u-f2e-p-Books-git-tree-master-E7-A7-BB-E5-8A-A8Web" class="headerlink" title="出处:https://coding.net/u/f2e/p/Books/git/tree/master/%E7%A7%BB%E5%8A%A8Web"></a>出处:<a href="https://coding.net/u/f2e/p/Books/git/tree/master/%E7%A7%BB%E5%8A%A8Web" target="_blank" rel="external">https://coding.net/u/f2e/p/Books/git/tree/master/%E7%A7%BB%E5%8A%A8Web</a></h3><h3 id="包含pc端-移动端js库-框架-css框架-工具等等…在原文基础上添加修改"><a href="#包含pc端-移动端js库-框架-css框架-工具等等…在原文基础上添加修改" class="headerlink" title="包含pc端,移动端js库,框架,css框架,工具等等…在原文基础上添加修改"></a>包含pc端,移动端js库,框架,css框架,工具等等…在原文基础上添加修改</h3><hr>
+<p>有些虽已经年代久远，但仍然可以学到很多有用的东西,可以整理资料的链接和其他链接资料或许有重复……<br><a href="https://github.com/qingniao99/front-end-collect" target="_blank" rel="external">–&gt;&gt;另外一个链接:分享自己长期关注的前端开发相关的优秀网站、博客、以及活跃开发者</a><br><a href="https://github.com/dypsilon/frontend-dev-bookmarks" target="_blank" rel="external">库</a></p>
+<h2 id="常用库查询系统"><a href="#常用库查询系统" class="headerlink" title="常用库查询系统"></a><a href="http://hackr.io/" target="_blank" rel="external">常用库查询系统</a></h2><h2 id="常用库查询系统2-迷你库"><a href="#常用库查询系统2-迷你库" class="headerlink" title="常用库查询系统2 - 迷你库"></a><a href="http://microjs.com/" target="_blank" rel="external">常用库查询系统2 - 迷你库</a></h2><h3 id="扩展库"><a href="#扩展库" class="headerlink" title="扩展库"></a>扩展库</h3><ul>
+<li><a href="https://github.com/es-shims/es5-shim" target="_blank" rel="external">es5-shim</a></li>
+<li>[es6-promise] (<a href="https://github.com/stefanpenner/es6-promise" target="_blank" rel="external">https://github.com/stefanpenner/es6-promise</a>)</li>
+</ul>
+<h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>-<a href="http://avalonjs.coding.me/" target="_blank" rel="external">avalon 2 中文文档</a><br>-<a href="http://vuejs.org.cn/guide/" target="_blank" rel="external">vue1.0 中文文档</a><br>-<a href="https://vuefe.cn/" target="_blank" rel="external">vue2.0 中文文档</a> </p>
+<h3 id="移动端资料"><a href="#移动端资料" class="headerlink" title="移动端资料"></a>移动端资料</h3><ul>
+<li><a href="http://am-team.github.io/amg/dev-exp-doc.html" target="_blank" rel="external">支付宝无线Web开发经验谈</a></li>
+<li><a href="http://tgideas.qq.com/webplat/info/news_version3/804/7104/7106/m5723/201411/290576.shtml" target="_blank" rel="external">移动前端系列——移动端页面坑与排坑技巧( 2014-12-08 )</a></li>
+<li><a href="http://www.ipresst.com/play/528892e11d0495f30f00762e" target="_blank" rel="external">移动web最佳实践（2013）</a></li>
+<li><a href="http://www.jingwentian.com/t-135" target="_blank" rel="external">移动Web前端框架 ( 2014 ) </a></li>
+<li><a href="https://github.com/amfe/lib.flexible" target="_blank" rel="external">移动端自适应方案-lib.flexible,淘宝手机版都是用这个框架</a></li>
+<li><a href="http://www.w3ctech.com/topic/1165#rd" target="_blank" rel="external">iOS 微信 音频 视频自动播放</a></li>
+<li><a href="http://www.w3cmark.com/2016/434.html" target="_blank" rel="external">解决ios下的微信打开的页面背景音乐无法自动播放</a></li>
+<li><a href="http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html" target="_blank" rel="external">微信JS-SDK说明文档</a></li>
+<li><a href="http://203.195.235.76/jssdk/" target="_blank" rel="external">微信js demo</a></li>
+<li><a href="http://www.qianduan.net/qqliu-lan-qi-x5nei-he-wen-ti-hui-zong/" target="_blank" rel="external">QQ浏览器X5内核问题汇总</a></li>
+<li><a href="http://viewportsizes.com/" target="_blank" rel="external">手机分辨率查询</a></li>
+<li><a href="https://github.com/peunzhang/pageResponse" target="_blank" rel="external">移动端响应式框架-测试阶段,不适用于复杂页面</a></li>
+</ul>
+<h3 id="学习资料-文章"><a href="#学习资料-文章" class="headerlink" title="学习资料/文章"></a>学习资料/文章</h3><ul>
+<li><a href="https://github.com/sundway/blog/issues/2" target="_blank" rel="external">渲染性能</a></li>
+<li><a href="https://github.com/wwsun/awesome-javascript" target="_blank" rel="external">awesome-javascript</a></li>
+<li><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">JavaScript教程 - 廖雪峰的官方网站</a></li>
+<li><a href="http://www.cnblogs.com/xirongliu/p/4589834.html" target="_blank" rel="external">Github使用指南-从新手到专家 </a></li>
+<li><a href="https://github.com/youyudehexie/node123" target="_blank" rel="external">node.js中文资料导航</a></li>
+<li><a href="https://github.com/vndmtrx/awesome-nodejs" target="_blank" rel="external">了不起的Nodejs Nodejs的各种资源,英文</a></li>
+<li><a href="https://github.com/justjavac/AngularJS-Learning-zh_CN" target="_blank" rel="external">AngularJS ,一些关于 AngularJS 的博客，文章，视频，书籍等</a></li>
+<li><a href="https://github.com/island205/HelloSea.js" target="_blank" rel="external">HelloSea.js seajs教程</a></li>
+<li><a href="https://github.com/ZhangBohan/http-api-design-ZH_CN" target="_blank" rel="external">HTTP API 设计指南</a></li>
+<li><a href="https://github.com/justjavac/json-api-zh_CN" target="_blank" rel="external">JSON API：用 JSON 构建 API 的标准指南中文版</a></li>
+<li><a href="https://github.com/enaqx/awesome-react" target="_blank" rel="external">了不起的React React的各种资源,英文</a></li>
+<li><a href="https://github.com/s5s5/CSS-Animations" target="_blank" rel="external">一家伙（s5s5）学习css3动画的心得</a></li>
+<li><a href="https://github.com/iamjoel/be-grace-front-end-developer" target="_blank" rel="external">让WEB前端的变优雅的东东，如：代码规范，代码组织，最佳实践之类</a></li>
+<li><a href="https://github.com/codylindley/frontend-tools" target="_blank" rel="external">前端工具推荐</a></li>
+<li><a href="http://shengxi.sinaapp.com/WS/content.html" target="_blank" rel="external">设计规范 -强烈推荐看</a></li>
+<li><a href="http://tgideas.qq.com/" target="_blank" rel="external">腾讯团队web移动文章</a></li>
+<li><a href="http://www.zhihu.com/question/27743708#answer-17103050" target="_blank" rel="external">视觉设计师是怎样让前端工程师 100% 实现设计效果的？</a></li>
+<li><a href="http://bonsaiden.github.io/JavaScript-Garden/zh/" target="_blank" rel="external">JavaScript 秘密花园</a></li>
+<li><a href="http://www.cnblogs.com/keepfool/p/5619070.html" target="_blank" rel="external">vue 教程</a></li>
+<li><a href="https://github.com/xitu/gold-miner/blob/master/TODO/smooth-css-animations.md" target="_blank" rel="external">10 个原则让动画带你飞</a></li>
+<li><a href="http://reactnative.cn/" target="_blank" rel="external">React Native 中文网</a></li>
+<li><a href="http://cssreference.io/" target="_blank" rel="external">cssreference.io</a></li>
+<li><a href="https://www.kancloud.cn/dengyigegushi/details-dahua/100439" target="_blank" rel="external">大话设计模式</a></li>
+</ul>
+<h3 id="书籍资料"><a href="#书籍资料" class="headerlink" title="书籍资料"></a>书籍资料</h3><ul>
+<li><a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank" rel="external">免费的计算机编程类中文书籍</a></li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books-zh.md" target="_blank" rel="external">免费编程书籍</a></li>
+<li><a href="https://github.com/nemoTyrant/manong" target="_blank" rel="external">码农周刊整理-推荐关注</a></li>
+<li><a href="https://github.com/xirong/my-git" target="_blank" rel="external">git资料</a></li>
+</ul>
+<h3 id="系列文章"><a href="#系列文章" class="headerlink" title="系列文章"></a>系列文章</h3><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2015/03/react.html" target="_blank" rel="external">React 入门实例教程</a></li>
+<li><a href="https://github.com/ele828/react-native-guide" target="_blank" rel="external">React-Native学习指南</a></li>
+<li><a href="http://jo2.org/html5-canvas-tutorial-list/" target="_blank" rel="external">html5 Canvas画图系列教程目录</a></li>
+<li><a href="http://www.cnblogs.com/jikey/p/3613082.html" target="_blank" rel="external">web前端开发分享-目录系列</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/4001284.html" target="_blank" rel="external">深入理解javascript原型和闭包系列</a></li>
+<li><a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" target="_blank" rel="external">深入理解JavaScript系列</a></li>
+<li><a href="http://shichuan.github.io/javascript-patterns/" target="_blank" rel="external">JavaScript模式集合</a></li>
+<li><a href="http://bbs.html5cn.org/forum.php?mod=viewthread&amp;tid=3335" target="_blank" rel="external">深入理解JavaScripts设计模式系列：</a></li>
+<li><a href="http://www.cnblogs.com/chenssy/p/3357683.html" target="_blank" rel="external">设计模式总结,非js</a></li>
+<li><a href="http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/" target="_blank" rel="external">7 天打造前端性能监控系统</a></li>
+<li><a href="http://nqdeng.github.io/7-days-nodejs/#5.2" target="_blank" rel="external">七天学会NodeJS</a></li>
+<li><a href="http://zhuanlan.zhihu.com/wooyun/19756127" target="_blank" rel="external">前端之困 · XSS CookBook系列</a></li>
+<li><a href="https://cnodejs.org/topic/551200e6d792542a29789a43" target="_blank" rel="external">一个月时间整理《深入浅出Node.js》</a></li>
+<li><a href="http://www.cnblogs.com/xing901022/p/4309840.html" target="_blank" rel="external">【web必知必会】——图解HTTP</a></li>
+<li><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">廖雪峰-JavaScript基础教程</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="external">MDN JavaScript基础教程</a></li>
+<li><a href="http://colobu.com/2014/09/23/45-Useful-JavaScript-Tips,-Tricks-and-Best-Practices/" target="_blank" rel="external">45个实用的JavaScript技巧、窍门和最佳实践</a></li>
+</ul>
+<hr>
+<h3 id="其他工具"><a href="#其他工具" class="headerlink" title="其他工具"></a>其他工具</h3><ul>
+<li><a href="http://the-echoplex.net/flexyboxes/" target="_blank" rel="external">flexbox在线制作器</a> </li>
+<li><a href="https://tonytony.club/spark/" target="_blank" rel="external">SPARK动画平台 这是我们组做的一个动画效果平台，里面集合了所有的牛逼动画，可以让你灵感猛增！（目前已开放外网使用）</a></li>
+<li><a href="http://a.singlediv.com/" target="_blank" rel="external">OneDiv 这是个神奇的网站，里面的所有细节都是用一个div元素通过复杂的Css3实现的，有空可以去开开脑洞噢</a></li>
+<li><a href="http://cubic-bezier.com/" target="_blank" rel="external">贝塞尔曲线生成器 </a></li>
+<li><a href="http://html5please.com/" title="html5与css3技术应用评估" target="_blank" rel="external">HTML5 与 CSS3 技术应用评估</a></li>
+<li><a href="http://browserhacks.com/" title="各种奇妙的hack" target="_blank" rel="external">各种奇妙的hack</a></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density" title="几乎所有设备的屏幕尺寸与像素密度表" target="_blank" rel="external">几乎所有设备的屏幕尺寸与像素密度表</a></li>
+<li><a href="http://screensiz.es/phone" title="移动设备参数表" target="_blank" rel="external">移动设备参数表</a></li>
+<li><a href="http://ivomynttinen.com/blog/the-ios-design-cheat-sheet-volume-2/" title="ios端移动设备参数速查" target="_blank" rel="external">ios端移动设备参数速查</a></li>
+<li><a href="http://www.quirksmode.org/compatibility.html" title="浏览器兼容表" target="_blank" rel="external">浏览器兼容表</a></li>
+<li><a href="https://deviceatlas.com/device-data/devices" title="移动设备查询器" target="_blank" rel="external">移动设备查询器</a></li>
+<li><a href="http://51degrees.codeplex.com/" title="移动设备适配库" target="_blank" rel="external">移动设备适配库</a></li>
+<li><a href="http://detectmobilebrowsers.com/" title="移动设备适配库2" target="_blank" rel="external">移动设备适配库2</a></li>
+<li><a href="https://deviceatlas.com/device-data/devices" title="viewport与设备尺寸在线检测器" target="_blank" rel="external">viewport与设备尺寸在线检测器</a></li>
+<li><a href="http://mobilehtml5.org/" title="html5移动端兼容性速查" target="_blank" rel="external">html5 移动端兼容性速查</a></li>
+<li><a href="http://www.fontsquirrel.com/tools/webfont-generator" title="在线转换字体" target="_blank" rel="external">在线转换字体</a></li>
+<li><a href="http://tools.css3.info/selectors-test/test.html" title="css3选择器测试" target="_blank" rel="external">css3 选择器测试</a></li>
+<li><a href="http://caniuse.com/" title="兼容性速查表" target="_blank" rel="external">兼容性速查表</a></li>
+<li><a href="http://www.browserscope.org/" title="浏览器的一些独特参数" target="_blank" rel="external">浏览器的一些独特参数</a></li>
+<li><a href="http://nmsdvid.com/snippets/" title="各种各样的媒体查询收集" target="_blank" rel="external">各种各样的媒体查询收集</a></li>
+<li><a href="http://include-media.com/" target="_blank" rel="external">sass @include-media 媒体查询库</a> <a href="https://github.com/eduardoboucas/include-media" target="_blank" rel="external">https://github.com/eduardoboucas/include-media</a></li>
+<li><a href="http://ecd.tencent.com/css3/tools.html" title="css3动画在线制作器" target="_blank" rel="external">css3 动画在线制作器</a></li>
+<li><a href="http://www.colorzilla.com/gradient-editor/" title="css3渐变在线制作器" target="_blank" rel="external">css3 渐变在线制作器</a></li>
+<li><a href="http://ww1.sinaimg.cn/bmiddle/c2c57f68jw1e4fh7dmw12j20fi2w6qe1.jpg" title="移动端手势表" target="_blank" rel="external">移动端手势表</a></li>
+<li><a href="http://ued.ctrip.com/blog/wp-content/webkitcss/" title="webkit独有的样式分析" target="_blank" rel="external">webkit独有的样式分析</a></li>
+<li><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills" target="_blank" rel="external">HTML5 Cross Browser Polyfills</a></li>
+<li><a href="http://html5polyfill.com/" title="HTML5 POLYFILLS" target="_blank" rel="external">HTML5 POLYFILLS</a></li>
+<li><a href="http://wileam.com/iphone-6-screen-cn/" target="_blank" rel="external">iPhone 6 屏幕揭秘</a></li>
+<li><a href="https://isux.tencent.com/zhitu-client.html" target="_blank" rel="external">智图客户端 – 你的图片你做主,本地图片快速压缩工具</a></li>
+<li><a href="https://github.com/soimort/you-get" target="_blank" rel="external">网站视频/音乐 扒神器</a></li>
+</ul>
+<p>###js插件网站</p>
+<ul>
+<li><a href="http://jquer.in/" target="_blank" rel="external">jquer.in</a></li>
+<li><a href="http://www.open-lib.com/" target="_blank" rel="external">OpenLib–http://www.open-lib.com/</a></li>
+<li><a href="http://www.jq22.com/" target="_blank" rel="external">Query插件库–http://www.jq22.com/</a></li>
+<li><a href="http://www.htmleaf.com/" target="_blank" rel="external">jquery之家–http://www.htmleaf.com/</a></li>
+<li><a href="http://www.sharetk.com/" target="_blank" rel="external">分享天空–http://www.sharetk.com/</a></li>
+<li><a href="http://www.jqueryscript.net/" target="_blank" rel="external">jQuery Script–http://www.jqueryscript.net/</a></li>
+<li><a href="http://www.dowebok.com/" target="_blank" rel="external">dowebok 做好网站–http://www.dowebok.com/ </a></li>
+<li><a href="http://www.zjgsq.com/" target="_blank" rel="external">Web前端开发–http://www.zjgsq.com/</a></li>
+</ul>
+<h3 id="前端组件库"><a href="#前端组件库" class="headerlink" title="前端组件库"></a>前端组件库</h3><blockquote>
+<p>搭建web app常用的样式/组件等收集列表(移动优先)</p>
+</blockquote>
+<h2 id="手势库"><a href="#手势库" class="headerlink" title="手势库"></a>手势库</h2><ul>
+<li><a href="http://labs.rampinteractive.co.uk/touchSwipe/demos/index.html" target="_blank" rel="external">TouchSwipe </a></li>
+</ul>
+<h2 id="vue-ui组件库"><a href="#vue-ui组件库" class="headerlink" title="vue ui组件库"></a>vue ui组件库</h2><ul>
+<li><a href="https://github.com/airyland/vux" target="_blank" rel="external">微信UI Vux 支持@^1.0.24</a></li>
+<li><a href="https://github.com/yuche/vue-strap" target="_blank" rel="external">bootstrap风格 Vux 支持@v1.x.x</a></li>
+<li><a href="https://github.com/posva/vue-mdl" target="_blank" rel="external">material风格 vue-mdl </a></li>
+<li><a href="https://github.com/JosephusPaye/Keen-UI" target="_blank" rel="external">Keen-UI </a></li>
+<li><a href="https://github.com/ElemeFE/mint-ui" target="_blank" rel="external">Mint UI </a></li>
+<li><a href="https://github.com/iview/iview" target="_blank" rel="external">iView UI</a></li>
+<li><a href="http://element.eleme.io" target="_blank" rel="external">element UI 支持vue@2.0</a></li>
+<li><a href="https://museui.github.io/" target="_blank" rel="external">Muse-UI - 基于 Vue 2.0 和 Material Desigin 的 UI 组件库</a></li>
+</ul>
+<h2 id="前端自动化-Workflow"><a href="#前端自动化-Workflow" class="headerlink" title="前端自动化(Workflow)"></a>前端自动化(Workflow)</h2><ul>
+<li>前端构建工具<ul>
+<li><a href="https://github.com/yeoman/yeoman" target="_blank" rel="external">Yeoman - a set of tools for automating development workflow</a></li>
+<li><a href="http://gulpjs.com/" target="_blank" rel="external">gulp - The streaming build system</a></li>
+<li><a href="http://gruntjs.com/" target="_blank" rel="external">grunt - the JavaScript Task Runner</a></li>
+<li><a href="https://github.com/fex-team/fis" target="_blank" rel="external">F.I.S - 前端集成解决方案</a></li>
+</ul>
+</li>
+<li>前端模块管理器<ul>
+<li><a href="http://bower.io/" target="_blank" rel="external">Bower - A package manager for the web</a></li>
+<li><a href="http://browserify.org/" target="_blank" rel="external">Browserify</a></li>
+<li><a href="https://github.com/componentjs/component" target="_blank" rel="external">Component</a></li>
+<li><a href="http://duojs.org/" target="_blank" rel="external">Duo</a></li>
+<li><a href="http://requirejs.org/" target="_blank" rel="external">RequireJS</a></li>
+<li><a href="http://seajs.org/" target="_blank" rel="external">Sea.js</a></li>
+<li><a href="http://webpack.github.io/docs/" target="_blank" rel="external">webpack</a></li>
+</ul>
+</li>
+<li>css预处理器<ul>
+<li><a href="http://lesscss.org/" target="_blank" rel="external">Less - Less is More , Than CSS</a></li>
+<li><a href="http://sass-lang.com/" target="_blank" rel="external">Sass - Syntactically Awesome Style Sheets</a></li>
+<li><a href="http://learnboost.github.io/stylus/" target="_blank" rel="external">Stylus - Expressive, dynamic, robust CSS</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-前端框架-Frameworks"><a href="#1-前端框架-Frameworks" class="headerlink" title="1. 前端框架(Frameworks)"></a>1. 前端框架(Frameworks)</h2><ul>
+<li><a href="http://material-ui.com/#/components/appbar" target="_blank" rel="external">Material-UI 移动端ui框架,效果好</a> <a href="https://github.com/callemall/material-ui" target="_blank" rel="external">github</a></li>
+<li><a href="http://frozenui.github.io/" target="_blank" rel="external">Frozen UI 腾讯移动UI框架</a></li>
+<li><a href="https://github.com/twbs/bootstrap" target="_blank" rel="external">Bootstrap</a></li>
+<li><a href="https://github.com/zurb/foundation" target="_blank" rel="external">Foundation</a></li>
+<li><a href="http://amazeui.org/" target="_blank" rel="external">Amaze UI</a></li>
+<li><a href="https://github.com/semantic-org/semantic-ui" target="_blank" rel="external">Semantic UI</a></li>
+<li><a href="http://purecss.io/" target="_blank" rel="external">Pure CSS</a></li>
+<li><a href="https://github.com/topcoat/topcoat" target="_blank" rel="external">topcoat</a></li>
+<li><a href="https://github.com/uikit/uikit" target="_blank" rel="external">UIkit</a></li>
+<li><a href="https://github.com/callemall/material-ui" target="_blank" rel="external">Material UI</a></li>
+<li><a href="http://www.idangero.us/framework7" target="_blank" rel="external">Framework7</a></li>
+<li><a href="https://github.com/dcloudio/mui" target="_blank" rel="external">mui</a></li>
+<li><a href="http://ionicframework.com/" target="_blank" rel="external">ionic framework</a></li>
+<li><a href="https://github.com/jaunesarmiento/fries" target="_blank" rel="external">Fries</a></li>
+<li><a href="http://jquerymobile.com/" target="_blank" rel="external">jQuery Mobile</a></li>
+<li><a href="http://h-ui.net/index.shtml" target="_blank" rel="external">H-ui 前端框架</a></li>
+<li><p><a href="https://github.com/dhg/Skeleton" target="_blank" rel="external">Skeleton</a></p>
+<h2 id="2-JavaScript-框架汇总"><a href="#2-JavaScript-框架汇总" class="headerlink" title="2. JavaScript 框架汇总"></a>2. JavaScript 框架汇总</h2></li>
+<li><p>JavaScript 框架</p>
+<ul>
+<li><a href="https://github.com/facebook/react" target="_blank" rel="external">react</a></li>
+<li><a href="https://github.com/angular/angular" target="_blank" rel="external">Angular</a></li>
+<li><a href="https://github.com/jquery/jquery" target="_blank" rel="external">jQuery</a></li>
+<li><a href="https://github.com/jashkenas/backbone" target="_blank" rel="external">Backbone.js</a></li>
+<li><a href="https://github.com/ractivejs/ractive" target="_blank" rel="external">Ractive.js</a></li>
+<li><a href="https://github.com/kissyteam/kissy" target="_blank" rel="external">KISSY</a></li>
+<li><a href="https://github.com/madrobby/zepto" target="_blank" rel="external">Zepto.js</a></li>
+<li><a href="http://github.e-sites.nl/zeptobuilder/" target="_blank" rel="external">ZeptoBuilder是Zepto的一个在线版本，从列表中选取你想包含的文件，就能得到你自定义的构建了</a></li>
+<li><a href="http://vanilla-js.com/" target="_blank" rel="external">Vanilla JS</a></li>
+<li><a href="https://github.com/RubyLouvre/avalon" target="_blank" rel="external">Avalon</a></li>
+<li><a href="https://github.com/bendc/sprint" target="_blank" rel="external">Sprint.js - 一个高性能、小体积的 DOM 操作库 (Benjamin De Cock) </a></li>
+<li><a href="http://jslite.io/" target="_blank" rel="external">JSLite.js</a></li>
+</ul>
+</li>
+<li><p>轻量级JavaScript框架</p>
+<ul>
+<li><a href="https://github.com/remy/min.js" target="_blank" rel="external">Min.js - Super minimal selector and event library</a></li>
+<li><a href="https://github.com/n33/skel" target="_blank" rel="external">skel.js - A lightweight responsive framework</a></li>
+<li>[LAB.js 异步加载js]</li>
+</ul>
+</li>
+<li><p>JavaScript 工具库</p>
+<ul>
+<li><a href="https://github.com/jashkenas/underscore" target="_blank" rel="external">underscore.js</a></li>
+<li><a href="https://github.com/gwendall/way.js" target="_blank" rel="external">Way.js - 双向数据绑定库</a></li>
+<li><a href="https://github.com/bitwalker/keys.js" target="_blank" rel="external">Keys.js - 应用快捷键</a></li>
+<li><a href="https://github.com/ccampbell/mousetrap" target="_blank" rel="external">Mousetrap - 键盘快捷键操作</a></li>
+<li><a href="https://github.com/yyx990803/vue" target="_blank" rel="external">Vue.js - 数据驱动的组件化MVVM库</a></li>
+<li><a href="http://alloyteam.github.io/AlloyLever/" target="_blank" rel="external">移动web开发调试工具AlloyLever介绍 - 打印信息</a></li>
+<li><a href="https://github.com/WechatFE/vConsole/blob/dev/README_CN.md" target="_blank" rel="external">vConsole.js 同上</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-前端游戏框架-动画引擎"><a href="#3-前端游戏框架-动画引擎" class="headerlink" title="3. 前端游戏框架(动画引擎)"></a>3. 前端游戏框架(动画引擎)</h2><ul>
+<li><a href="https://github.com/hiloteam/Hilo" target="_blank" rel="external">Hilo 跨终端的互动游戏解决方案 阿里出品</a></li>
+<li><a href="http://www.pixijs.com/" target="_blank" rel="external"> Pixi.js 3.0.7 - WebGL 国外游戏引擎</a> <a href="https://github.com/pixijs/pixi.js" target="_blank" rel="external">https://github.com/pixijs/pixi.js</a></li>
+<li><a href="https://github.com/cocos2d/cocos2d-html5" target="_blank" rel="external">cocos2d-html5</a></li>
+<li><a href="http://www.egret-labs.org/" target="_blank" rel="external">Egret Engine</a></li>
+<li><a href="https://github.com/digitalfruit/limejs" target="_blank" rel="external">LimeJS</a></li>
+<li><a href="https://github.com/CreateJS/EaselJS" target="_blank" rel="external">EaselJS</a></li>
+<li><a href="https://github.com/mrdoob/three.js" target="_blank" rel="external">three.js</a></li>
+<li><a href="https://github.com/AlloyTeam/AlloyStick" target="_blank" rel="external">AlloyStick</a></li>
+<li><a href="https://github.com/finscn/The-Best-JS-Game-Framework" target="_blank" rel="external">The-Best-JS-Game-Framework</a></li>
+<li><a href="https://github.com/RSamaium/CanvasEngine" target="_blank" rel="external">CanvasEngine</a></li>
+<li><a href="https://github.com/cykod/Quintus" target="_blank" rel="external">Quintus</a></li>
+<li><a href="http://layabox.com/" target="_blank" rel="external">LayaAir 引擎 国内游戏框架,跟白鹭比较??暂时不知道</a></li>
+<li><a href="http://soya2d.com" target="_blank" rel="external">soya2d 一个 好学、易用、强大、开源的 H5游戏引擎 现在,有你掌控</a></li>
+</ul>
+<h2 id="4-ui组件库"><a href="#4-ui组件库" class="headerlink" title="4. ui组件库"></a>4. ui组件库</h2><ul>
+<li><a href="https://github.com/fex-team/GMU" target="_blank" rel="external">GMU - 基于zepto的ui组件库，适用于移动端</a></li>
+<li><a href="https://github.com/frozenui/frozenui" target="_blank" rel="external">FrozenUI - 腾讯移动端组件库</a></li>
+<li><a href="http://nec.netease.com/" target="_blank" rel="external">NEC</a></li>
+<li><a href="http://nej.netease.com/" target="_blank" rel="external">NEJ</a></li>
+<li><a href="https://github.com/LFeh/css-components/" target="_blank" rel="external">Pure CSS Components</a></li>
+<li><a href="https://github.com/adamschwartz/magic-of-css" target="_blank" rel="external">magic-of-css</a></li>
+<li><a href="https://github.com/primer/primer" target="_blank" rel="external">Primer - The CSS toolkit and guidelines that power GitHub</a></li>
+<li>[ZUI - 一个开源前端实践方案，帮助你快速构现代跨屏应用。][1]</li>
+<li>[WeX5开源前端][2]</li>
+<li>[B-JUI][3]</li>
+<li><a href="https://www.muicss.com/" target="_blank" rel="external">MUI 轻量级WEB框架</a></li>
+<li><a href="http://lihongxun945.github.io/jquery-weui/" target="_blank" rel="external">jQuery WeUI - V0.7.1 WeUI 的jQuery实现版，提供了大量官方WeUI没有的组件, 同时兼容 jQuery 和 Zepto。</a></li>
+<li><a href="http://www.light7.cn/" target="_blank" rel="external">Light7 手机ui组件</a></li>
+</ul>
+<h2 id="5-基础模版"><a href="#5-基础模版" class="headerlink" title="5. 基础模版"></a>5. 基础模版</h2><ul>
+<li>浏览器统一(Cross Browser)<ul>
+<li><a href="https://github.com/h5bp/html5-boilerplate" target="_blank" rel="external">HTML5 BOILERPLATE</a></li>
+<li><a href="https://github.com/Modernizr/Modernizr" target="_blank" rel="external">Modernizr</a></li>
+<li><a href="https://github.com/necolas/normalize.css/" target="_blank" rel="external">Normalize.css</a></li>
+<li><a href="https://github.com/imsky/cssFx" target="_blank" rel="external">cssFx - 为CSS3自动生成浏览器前缀</a></li>
+<li><a href="https://github.com/LeaVerou/prefixfree" target="_blank" rel="external">-prefix-free - Break free from CSS prefix hell</a></li>
+</ul>
+</li>
+<li>响应式<ul>
+<li><a href="https://github.com/ResponsiveBP/Responsive" target="_blank" rel="external">Responsive - 响应式布局</a></li>
+<li><a href="https://github.com/WickyNilliams/enquire.js" target="_blank" rel="external">Enquire.js - Awesome Media Queries in JavaScript</a></li>
+<li><a href="https://github.com/kombai/freewall" target="_blank" rel="external">Free Wall - 创建桌面，移动和平板的动态网格布局</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-排版"><a href="#6-排版" class="headerlink" title="6. 排版"></a>6. 排版</h2><ul>
+<li><a href="https://github.com/lepture/yue.css" target="_blank" rel="external">yue.css</a></li>
+<li><a href="https://github.com/sofish/typo.css" target="_blank" rel="external">typo.css</a></li>
+<li><a href="https://github.com/sparanoid/chinese-copywriting-guidelines" target="_blank" rel="external">chinese-copywriting-guidelines - 中文文案排版指南</a></li>
+</ul>
+<h2 id="7-网格系统"><a href="#7-网格系统" class="headerlink" title="7. 网格系统"></a>7. 网格系统</h2><ul>
+<li><a href="https://github.com/lzxb/flex.css" target="_blank" rel="external">flex.css - 快速入门，极速布局</a></li>
+<li><a href="https://github.com/aekaplan/grid" target="_blank" rel="external">grid</a></li>
+<li><a href="https://github.com/kristoferjoseph/flexboxgrid" target="_blank" rel="external">Flexbox Grid</a></li>
+<li><a href="https://github.com/DrewDahlman/Mason" target="_blank" rel="external">MasonJS - creating a perfect grid</a></li>
+<li><a href="http://juicedcss.com/" target="_blank" rel="external">Juiced: a Flexbox CSS Framework</a></li>
+<li><a href="http://neutroncss.com/" target="_blank" rel="external">Neutron 创建灵化、简洁网页布局的SASS框架</a></li>
+<li><a href="http://flexible.gs" target="_blank" rel="external">flexible.gs 灵活的响应式栅格布局CSS框架</a></li>
+<li><a href="http://decorator.codable.org" target="_blank" rel="external">Decorator - HTML, CSS, and JavaScrip 前端框架</a></li>
+<li><p><a href="http://alves.im/minigrid/" target="_blank" rel="external">minigrid.js 只有2KB的零依赖栅格布局-瀑布流</a></p>
+<h2 id="8-HTML5-API-应用"><a href="#8-HTML5-API-应用" class="headerlink" title="8. HTML5 API 应用"></a>8. HTML5 API 应用</h2></li>
+<li><p><a href="https://github.com/browserstate/history.js" target="_blank" rel="external">History.js - gracefully supports the HTML5 History/State APIs</a></p>
+</li>
+<li><a href="https://github.com/defunkt/jquery-pjax" target="_blank" rel="external">jquery-pjax - pushState+ajax</a></li>
+<li><a href="https://github.com/asual/jquery-address" target="_blank" rel="external">jquery-address - Deep Linking</a></li>
+<li><a href="https://github.com/alexgibson/notify.js" target="_blank" rel="external">Notify.js(Web Notifications API)</a></li>
+</ul>
+<h2 id="9-UA-识别"><a href="#9-UA-识别" class="headerlink" title="9. UA 识别"></a>9. UA 识别</h2><ul>
+<li><a href="https://github.com/hotoo/detector" target="_blank" rel="external">detector</a></li>
+</ul>
+<h2 id="10-表单处理"><a href="#10-表单处理" class="headerlink" title="10. 表单处理"></a>10. 表单处理</h2><h3 id="10-1-表单验证-Form-Validator-表单提示"><a href="#10-1-表单验证-Form-Validator-表单提示" class="headerlink" title="10.1 表单验证(Form Validator)/表单提示"></a>10.1 表单验证(Form Validator)/表单提示</h3><ul>
+<li><a href="https://github.com/niceue/validator" target="_blank" rel="external">Validator</a></li>
+<li><a href="https://github.com/guillaumepotier/Parsley.js" target="_blank" rel="external">Parsley</a></li>
+<li><a href="https://github.com/malsup/form" target="_blank" rel="external">jquery.form.js - jQuery Form Plugin</a></li>
+<li><a href="https://github.com/haiercdboy/Validform" target="_blank" rel="external">Validform</a></li>
+<li><a href="https://github.com/sofish/validator.js" target="_blank" rel="external">validator.js</a></li>
+<li><a href="https://github.com/jzaefferer/jquery-validation" target="_blank" rel="external">jquery-validation - jQuery Validation Plugin</a></li>
+<li><a href="https://github.com/victorjonsson/jQuery-Form-Validator" target="_blank" rel="external">formvalidator.js</a></li>
+<li><a href="http://github.com/Colourity/Fort.js" target="_blank" rel="external">Fort.js – 表单填写进度提示</a></li>
+<li><a href="https://github.com/mailcheck/mailcheck" target="_blank" rel="external">mailcheck - 用于检测email地址的域名</a></li>
+<li><a href="https://github.com/clubdesign/floatlabels.js" target="_blank" rel="external">Floatlable.js - 输入时显示placeholder文本</a></li>
+<li><a href="https://github.com/peachananr/label_better" target="_blank" rel="external">jQuery Label Better</a></li>
+</ul>
+<h3 id="10-2-lt-select-gt-相关"><a href="#10-2-lt-select-gt-相关" class="headerlink" title="10.2 &lt; select &gt; 相关"></a>10.2 &lt; select &gt; 相关</h3><ul>
+<li><a href="https://github.com/harvesthq/chosen" target="_blank" rel="external">Chosen</a></li>
+<li><a href="https://github.com/select2/select2" target="_blank" rel="external">Select2</a></li>
+<li><a href="https://github.com/silviomoreto/bootstrap-select" target="_blank" rel="external">bootstrap-select</a></li>
+</ul>
+<h3 id="10-3-单选框-复选框相关"><a href="#10-3-单选框-复选框相关" class="headerlink" title="10.3 单选框/复选框相关"></a>10.3 单选框/复选框相关</h3><ul>
+<li><a href="https://github.com/fronteed/iCheck" target="_blank" rel="external">iCheck - 增强复选框和单选按钮</a></li>
+</ul>
+<h3 id="10-4-上传组件"><a href="#10-4-上传组件" class="headerlink" title="10.4 上传组件"></a>10.4 上传组件</h3><ul>
+<li><a href="https://github.com/blueimp/jQuery-File-Upload" target="_blank" rel="external">jQuery File Upload Plugin</a></li>
+<li><a href="http://fex-team.github.io/webuploader/" target="_blank" rel="external">百度 Web Uploader</a></li>
+<li><a href="http://www.uploadify.com/" target="_blank" rel="external">Uploadify</a></li>
+<li><a href="https://github.com/moxiecode/plupload" target="_blank" rel="external">Plupload</a></li>
+<li><a href="http://fineuploader.com/index.html" target="_blank" rel="external">Fine Uploader</a></li>
+<li><a href="https://github.com/aralejs/upload" target="_blank" rel="external">arale-upload - 轻量级 iframe and html5 file uploader</a></li>
+<li><a href="https://github.com/enyo/dropzone" target="_blank" rel="external">Dropzone.js - drag’n’drop library拖拽上传</a></li>
+<li><a href="https://github.com/flowjs/flow.js" target="_blank" rel="external">flow.js</a></li>
+<li><a href="https://github.com/think2011/localResizeIMG3" target="_blank" rel="external">localResizeIMG3 - 前端本地客户端压缩图片，兼容IOS，Android，PC</a></li>
+<li><p><a href="http://mailru.github.io/FileAPI/" target="_blank" rel="external">FileAPI - 是文件上传（单个/多个）、拖放支持、图像裁剪、大小调整、应用过滤器和获取文件信息</a><br>-<a href="http://www.resumablejs.com/" target="_blank" rel="external">Resumable.JS 通过HTML5API提供了稳定可恢复的多文件上传功能。</a></p>
+<h3 id="10-5-日期选择"><a href="#10-5-日期选择" class="headerlink" title="10.5 日期选择"></a>10.5 日期选择</h3></li>
+<li><p><a href="https://github.com/smalot/bootstrap-datetimepicker" target="_blank" rel="external">Both Date and Time picker widget based on twitter bootstrap</a></p>
+</li>
+<li><a href="http://gmu.baidu.com/demo/widget/calendar/calendar.html" target="_blank" rel="external">GMU 日历组件</a></li>
+<li><a href="https://github.com/acidb/mobiscroll" target="_blank" rel="external">Mobiscroll</a></li>
+<li><a href="https://github.com/dbushell/Pikaday" target="_blank" rel="external">Pikaday - 日期选择器</a></li>
+<li><p><a href="http://timeline.knightlab.com/" target="_blank" rel="external">TimelineJS - 时间轴</a></p>
+<h3 id="10-6-取色"><a href="#10-6-取色" class="headerlink" title="10.6 取色"></a>10.6 取色</h3></li>
+<li><p><a href="https://github.com/mjolnic/bootstrap-colorpicker" target="_blank" rel="external">Colorpicker plugin for Twitter Bootstrap</a></p>
+</li>
+</ul>
+<h3 id="10-7-标签插件-Tag"><a href="#10-7-标签插件-Tag" class="headerlink" title="10.7 标签插件(Tag)"></a>10.7 标签插件(Tag)</h3><ul>
+<li><a href="https://github.com/sniperwolf/taggingJS" target="_blank" rel="external">TaggingJS – 可以灵活定制的 jQuery 标签系统插件</a></li>
+<li><a href="https://github.com/brianreavis/selectize.js" target="_blank" rel="external">selectize.js</a></li>
+</ul>
+<h3 id="10-8-自动完成插件"><a href="#10-8-自动完成插件" class="headerlink" title="10.8 自动完成插件"></a>10.8 自动完成插件</h3><ul>
+<li><a href="https://github.com/ichord/At.js" target="_blank" rel="external">At.js - 一个Twitter/微博样式的@自动完成插件</a></li>
+<li><a href="https://github.com/yuku-t/jquery-textcomplete" target="_blank" rel="external">jquery-textcomplete - 智能搜索提示框/自动补全</a></li>
+<li><a href="https://github.com/twitter/typeahead.js" target="_blank" rel="external">typeahead.js - a fast and fully-featured autocomplete library</a></li>
+<li><a href="http://leaverou.github.io/awesomplete/" target="_blank" rel="external">Awesomplete - 零依赖的简单自动完成插件</a> - <a href="https://github.com/LeaVerou/awesomplete" target="_blank" rel="external">github</a></li>
+</ul>
+<h3 id="10-9-样式修正"><a href="#10-9-样式修正" class="headerlink" title="10.9 样式修正"></a>10.9 样式修正</h3><ul>
+<li><a href="https://github.com/jackmoore/autosize" target="_blank" rel="external">autosize - 使文本框自动适应所输入的内容</a></li>
+</ul>
+<h2 id="11-图表绘制-图形库-Graphics"><a href="#11-图表绘制-图形库-Graphics" class="headerlink" title="11. 图表绘制/图形库(Graphics)"></a>11. 图表绘制/图形库(Graphics)</h2><ul>
+<li><a href="https://github.com/highslide-software/highcharts.com" target="_blank" rel="external">Highcharts</a></li>
+<li><a href="https://github.com/nnnick/Chart.js" target="_blank" rel="external">Chart.js - 基于HTML5的JavaScript图表</a></li>
+<li><a href="https://github.com/ecomfe/echarts" target="_blank" rel="external">百度 ECharts</a></li>
+<li><a href="https://github.com/gionkunz/chartist-js" target="_blank" rel="external">Chartist.js</a></li>
+<li><a href="https://github.com/mbostock/d3" target="_blank" rel="external">D3.js - A JavaScript visualization library for HTML and SVG.</a></li>
+<li><a href="https://github.com/square/intro-to-d3" target="_blank" rel="external">intro-to-d3 - a D3.js tutorial</a></li>
+<li><a href="https://github.com/uxebu/bonsai" target="_blank" rel="external">Bonsai - 一个功能强大的JavaScript图形库</a></li>
+<li><a href="http://fastly.github.io/epoch/" target="_blank" rel="external">Epoch - 漂亮、平稳流畅和高性能可视化的图表库</a></li>
+<li><a href="http://jonobr1.github.io/two.js/" target="_blank" rel="external">SVG 2D绘图</a></li>
+<li><p><a href="https://alexk111.github.io/SVG-Morpheus/" target="_blank" rel="external">SVG Morpheus - SVG图形变形动画</a></p>
+<h2 id="12-日期格式化"><a href="#12-日期格式化" class="headerlink" title="12. 日期格式化"></a>12. 日期格式化</h2></li>
+<li><p><a href="http://momentjs.com/" target="_blank" rel="external">Moment.js - 日期处理</a></p>
+</li>
+<li><a href="https://github.com/pragmaticly/smart-time-ago" target="_blank" rel="external">Smart Time Ago - 显示相对时间</a></li>
+<li><a href="http://formatjs.io/" target="_blank" rel="external">FormatJS – 让你的 Web 应用程序国际化</a><h2 id="13-页面交互"><a href="#13-页面交互" class="headerlink" title="13. 页面交互"></a>13. 页面交互</h2></li>
+</ul>
+<h3 id="13-1-Slider"><a href="#13-1-Slider" class="headerlink" title="13.1 Slider"></a>13.1 Slider</h3><ul>
+<li><a href="https://github.com/kenwheeler/slick/" target="_blank" rel="external">slick - the last carousel you’ll ever need</a></li>
+<li><a href="https://github.com/thebird/Swipe" target="_blank" rel="external">Swipe - the most accurate touch slider</a></li>
+<li><a href="http://www.idangero.us/swiper/demos/#.VUCEQUYr_pA" target="_blank" rel="external">Swiper - 移动端/pc端滑动组件比较强大</a> - <a href="https://github.com/nolimits4web/Swiper" target="_blank" rel="external">github</a></li>
+<li><a href="https://github.com/cubiq/iscroll" target="_blank" rel="external">iscroll - 简约模拟滑动层</a></li>
+<li><a href="https://github.com/BE-FE/iSlider" target="_blank" rel="external">iSlider - 移动端滑动组件</a></li>
+<li><a href="https://github.com/OwlFonk/OwlCarousel" target="_blank" rel="external">OwlCarousel - create beautiful responsive carousel slider</a></li>
+<li><a href="https://github.com/jquery/jquery-mousewheel/" target="_blank" rel="external">jquery-mousewheel - jQuery鼠标滚轮滚动侦测插件</a></li>
+<li><a href="https://github.com/jedrzejchalubek/Glide.js" target="_blank" rel="external">Glide.js - 轻量级滑块组件</a></li>
+</ul>
+<h3 id="13-2-瀑布流"><a href="#13-2-瀑布流" class="headerlink" title="13.2 瀑布流"></a>13.2 瀑布流</h3><ul>
+<li><a href="http://masonry.desandro.com/" target="_blank" rel="external">Masonry</a></li>
+<li><a href="http://isotope.metafizzy.co/" target="_blank" rel="external">Isotope - Filter &amp; sort magical layouts</a></li>
+</ul>
+<h3 id="13-3-懒加载-加载监听-预加载"><a href="#13-3-懒加载-加载监听-预加载" class="headerlink" title="13.3 懒加载/加载监听/预加载"></a>13.3 懒加载/加载监听/预加载</h3><ul>
+<li><a href="http://callmecavs.github.io/layzr.js/" target="_blank" rel="external">layzr.js - git关注蛮高的</a> - <a href="https://github.com/callmecavs/layzr.js" target="_blank" rel="external">github</a></li>
+<li><a href="https://github.com/desandro/imagesloaded" target="_blank" rel="external">imagesLoaded</a></li>
+<li><a href="https://github.com/toddmotto/echo" target="_blank" rel="external">Echo.js</a></li>
+<li><a href="https://github.com/aFarkas/lazysizes" target="_blank" rel="external">lazySizes</a></li>
+<li><a href="https://github.com/tuupola/jquery_lazyload" target="_blank" rel="external">jquery_lazyload</a></li>
+<li><a href="https://github.com/shprink/bttrlazyloading/" target="_blank" rel="external">BttrLazyLoading</a></li>
+<li><a href="https://github.com/vvo/lazyload" target="_blank" rel="external">lazyload.js</a></li>
+<li><a href="https://github.com/alexanderdickson/waitForImages" target="_blank" rel="external">waitForImages - 图片加载监听库</a></li>
+<li><a href="https://github.com/thinkpixellab/PxLoader" target="_blank" rel="external">PxLoader - JS预加载库:实现图片、声音等各种文件的预加载功能</a></li>
+<li><a href="https://github.com/htmlhero/jQuery.preload/blob/master/src/jquery.preload.js" target="_blank" rel="external">jQuery.preload - 预加载图片资源</a></li>
+<li><a href="https://github.com/bgrins/bindWithDelay" target="_blank" rel="external">bindWithDelay - jQuery Plugin For Delayed Event Execution</a></li>
+<li><a href="https://github.com/dennyferra/TypeWatch" target="_blank" rel="external">TypeWatch - 停止输入时调用</a></li>
+</ul>
+<h3 id="13-4-图片轮播-幻灯片-图片展示"><a href="#13-4-图片轮播-幻灯片-图片展示" class="headerlink" title="13.4 图片轮播(幻灯片)/图片展示"></a>13.4 图片轮播(幻灯片)/图片展示</h3><ul>
+<li><a href="http://www.SuperSlide2.com/" target="_blank" rel="external">SuperSlide - 国产的幻灯片,功能集成比较多,我个人推荐</a></li>
+<li><a href="https://github.com/woothemes/FlexSlider" target="_blank" rel="external">FlexSlider</a></li>
+<li><a href="https://github.com/idiot/unslider" target="_blank" rel="external">unslider - 小而美的轮播库</a></li>
+<li><a href="https://github.com/scaron/prettyphoto" target="_blank" rel="external">prettyPhoto</a></li>
+<li><a href="https://github.com/chrishumboldt/Flickerplate" target="_blank" rel="external">FlickerPlate - A cool jQuery plugin that lets you flick through content.</a></li>
+<li><a href="https://github.com/imsky/holder" target="_blank" rel="external">Holder.js - Client-side image placeholders.</a></li>
+<li><a href="https://github.com/brunjo/rowGrid.js" target="_blank" rel="external">RowGrid.js - 在径直的行里放置图片</a></li>
+<li><a href="http://osvaldas.info/examples/image-lightbox-responsive-touch-friendly/" target="_blank" rel="external">ImageLightbox.js - 灯箱效果</a></li>
+<li><a href="https://github.com/peachananr/panorama_viewer" target="_blank" rel="external">JQuery Panorama Viewer - 全景视图</a></li>
+<li><a href="http://photoswipe.com/" target="_blank" rel="external">PhotoSwipe - 移动开发必备的 iOS 风格相册</a> - <a href="https://github.com/dimsemenov/photoswipe" target="_blank" rel="external">github</a></li>
+</ul>
+<h3 id="13-5-图片剪裁-图片处理"><a href="#13-5-图片剪裁-图片处理" class="headerlink" title="13.5 图片剪裁/图片处理"></a>13.5 图片剪裁/图片处理</h3><ul>
+<li><a href="https://github.com/tapmodo/Jcrop" target="_blank" rel="external">Jcrop -  Image Cropping Plugin for jQuery</a></li>
+<li><a href="https://github.com/sconsult/croppic" target="_blank" rel="external">croppic - an image cropping jquery plugin</a></li>
+<li><a href="https://github.com/boblemarin/jQuery.eraser" target="_blank" rel="external">jQuery.eraser - 图像擦除插件</a></li>
+<li><a href="http://www.dillerdesign.com/experiment/DD_belatedPNG/" target="_blank" rel="external">DD_belatedPNG.js - 让IE6支持透明PNG图片</a></li>
+<li><a href="https://github.com/jonom/jquery-focuspoint" target="_blank" rel="external">FocusPoint.js 实现图片的响应式裁剪</a></li>
+<li><a href="http://scottjehl.github.io/picturefill/" target="_blank" rel="external">Picturefill - 一个响应式图片 JS 插件 (Scott Jehl) </a></li>
+<li><a href="http://www.jqueryscript.net/zoom/jQuery-Plugin-For-Image-Zoom-On-Hover-picZoomer.html" target="_blank" rel="external">jQuery picZoomer - 图片区域放大</a></li>
+<li><p><a href="http://brianium.github.io/watermarkjs/" target="_blank" rel="external">watermark.js 为图片添加水印</a></p>
+<h3 id="13-6-进度条-加载动画-Loading"><a href="#13-6-进度条-加载动画-Loading" class="headerlink" title="13.6 进度条/加载动画(Loading)"></a>13.6 进度条/加载动画(Loading)</h3></li>
+<li><p><a href="http://ricostacruz.com/nprogress/" target="_blank" rel="external">NProgress.js</a></p>
+</li>
+<li><a href="https://github.com/usablica/progress.js" target="_blank" rel="external">progress.js</a></li>
+<li><a href="https://github.com/HubSpot/pace" target="_blank" rel="external">Pace - Automatic page load progress bar</a></li>
+<li><a href="https://github.com/englercj/jquery-ajax-progress" target="_blank" rel="external">jquery-ajax-progress</a></li>
+<li><a href="https://github.com/vadimsva/waitMe" target="_blank" rel="external">waitMe - 很漂亮的loading效果</a></li>
+<li><a href="https://github.com/fgnass/spin.js" target="_blank" rel="external">spin.js</a></li>
+<li><a href="https://github.com/padolsey/sonic.js" target="_blank" rel="external">sonic.js</a></li>
+<li><a href="https://github.com/joaopereirawd/fakeLoader.js" target="_blank" rel="external">fakeLoader.js - 依赖jQ的全屏加载js</a></li>
+<li><p><a href="https://github.com/rendro/easy-pie-chart" target="_blank" rel="external">Easy Pie Chart</a></p>
+<h3 id="13-7-侧滑插件-offcancas"><a href="#13-7-侧滑插件-offcancas" class="headerlink" title="13.7 侧滑插件(offcancas)"></a>13.7 侧滑插件(offcancas)</h3></li>
+<li><p><a href="https://github.com/christophery/pushy" target="_blank" rel="external">pushy -  a responsive off-canvas navigation menu </a></p>
+</li>
+<li><a href="https://github.com/mango/slideout" target="_blank" rel="external">Slideout.js - 一个用于移动 Web 应用的触摸滑出式导航菜单</a></li>
+</ul>
+<h3 id="13-8-菜单-Menu"><a href="#13-8-菜单-Menu" class="headerlink" title="13.8 菜单(Menu)"></a>13.8 菜单(Menu)</h3><ul>
+<li><a href="https://github.com/joeldbirch/superfish" target="_blank" rel="external">SuperFish - 基于jQuery的级联下拉菜单</a></li>
+<li><a href="https://github.com/viljamis/responsive-nav.js" target="_blank" rel="external">Responsive Nav - 响应式导航</a></li>
+</ul>
+<h3 id="13-9-滚动侦测-ScrollSpy"><a href="#13-9-滚动侦测-ScrollSpy" class="headerlink" title="13.9 滚动侦测(ScrollSpy)"></a>13.9 滚动侦测(ScrollSpy)</h3><ul>
+<li><a href="https://github.com/sxalexander/jquery-scrollspy" target="_blank" rel="external">jquery-scrollspy(1)</a></li>
+<li><a href="https://github.com/thesmart/jquery-scrollspy" target="_blank" rel="external">jquery-scrollspy(2)</a></li>
+<li><a href="https://github.com/imakewebthings/waypoints" target="_blank" rel="external">Waypoints</a></li>
+<li><a href="https://github.com/janpaepke/ScrollMagic" target="_blank" rel="external">ScrollMagic - 像进度条一样使用滚动条</a></li>
+<li><a href="http://silvestreh.github.io/onScreen/" target="_blank" rel="external">onScreen - 滚动加载,滚动固定</a></li>
+</ul>
+<h3 id="13-10-滚动加载更多-下拉刷新-Pull-to-Refresh"><a href="#13-10-滚动加载更多-下拉刷新-Pull-to-Refresh" class="headerlink" title="13.10 滚动加载更多/下拉刷新(Pull to Refresh)"></a>13.10 滚动加载更多/下拉刷新(Pull to Refresh)</h3><ul>
+<li><a href="https://github.com/pklauzinski/jscroll" target="_blank" rel="external">jScroll</a></li>
+<li><a href="https://github.com/apeatling/web-pull-to-refresh" target="_blank" rel="external">web-pull-to-refresh</a></li>
+<li><a href="https://github.com/dwcares/pulltorefresh" target="_blank" rel="external">pulltorefresh</a></li>
+<li><a href="https://github.com/ThrivingKings/RubberBand.js" target="_blank" rel="external">RubberBand.js - add pull-to-refresh functionality to any page.</a></li>
+<li><a href="http://airbnb.github.io/infinity/" target="_blank" rel="external">infinity.js/∞ .js 无限下拉加载</a></li>
+</ul>
+<h3 id="13-11-平滑滚动插件-Smooth-Scroll"><a href="#13-11-平滑滚动插件-Smooth-Scroll" class="headerlink" title="13.11 平滑滚动插件(Smooth Scroll)"></a>13.11 平滑滚动插件(Smooth Scroll)</h3><ul>
+<li><a href="https://github.com/kswedberg/jquery-smooth-scroll" target="_blank" rel="external">jquery-smooth-scroll</a></li>
+<li><a href="https://github.com/flesler/jquery.scrollTo" target="_blank" rel="external">jquery.scrollTo - 平滑滚动到页面指定位置</a></li>
+<li><a href="https://github.com/cferdinandi/smooth-scroll" target="_blank" rel="external">smooth-scroll</a></li>
+<li><a href="https://github.com/markgoodyear/scrollup" target="_blank" rel="external">scrollUp</a></li>
+<li><a href="https://github.com/tholman/elevator.js" target="_blank" rel="external">Elevator.js 一个模拟电梯运行“返回顶部”的 JS 插件 (Tim Holman) </a></li>
+</ul>
+<h3 id="13-12-全屏滚动-全屏切换"><a href="#13-12-全屏滚动-全屏切换" class="headerlink" title="13.12 全屏滚动/全屏切换"></a>13.12 全屏滚动/全屏切换</h3><ul>
+<li><a href="https://github.com/alvarotrigo/pagePiling.js" target="_blank" rel="external">pagePiling.js - 全屏滚动效果</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/" target="_blank" rel="external">fullPage.js</a></li>
+<li><a href="https://github.com/peachananr/onepage-scroll" target="_blank" rel="external">onepage-scroll</a></li>
+<li><a href="https://github.com/yanhaijing/zepto.fullpage" target="_blank" rel="external">zepto.fullpage - 专注于移动端的fullPage.js</a></li>
+<li><a href="https://github.com/sindresorhus/screenfull.js" target="_blank" rel="external">screenfull.js - 切换全屏模式</a></li>
+<li><a href="http://www.slashie.org/space.js/" target="_blank" rel="external">Space.js – HTML 驱动的页面 3D 滚动效果</a> - <a href="https://github.com/gopatrik/space.js" target="_blank" rel="external">github</a></li>
+</ul>
+<h3 id="13-13-分屏滚动"><a href="#13-13-分屏滚动" class="headerlink" title="13.13 分屏滚动"></a>13.13 分屏滚动</h3><ul>
+<li><a href="https://github.com/alvarotrigo/multiscroll.js" target="_blank" rel="external">multiscroll.js - 分屏滚动效果</a></li>
+</ul>
+<h3 id="13-14-转场效果"><a href="#13-14-转场效果" class="headerlink" title="13.14 转场效果"></a>13.14 转场效果</h3><ul>
+<li><a href="https://github.com/blivesta/animsition" target="_blank" rel="external">Animsition - 页面切换时的过渡效果</a></li>
+</ul>
+<h3 id="13-15-固定元素-Sticky"><a href="#13-15-固定元素-Sticky" class="headerlink" title="13.15 固定元素(Sticky)"></a>13.15 固定元素(Sticky)</h3><ul>
+<li><a href="http://leafo.net/sticky-kit/" target="_blank" rel="external">Sticky-Kit 比较出名,功能强大,个人推荐</a></li>
+<li><a href="http://www.jozefbutko.com/stickynavbar/" target="_blank" rel="external"> Sticky Navbar -可定点</a></li>
+<li><a href="http://imakewebthings.com/waypoints/" target="_blank" rel="external">Waypoints</a></li>
+<li><a href="https://github.com/garand/sticky" target="_blank" rel="external">sticky - jQuery Plugin for Sticky Objects</a></li>
+<li><a href="https://github.com/webpop/jquery.pin" target="_blank" rel="external">jquery.pin - 固定页面元素</a></li>
+<li><a href="https://github.com/LiranCohen/stickUp" target="_blank" rel="external">stickUp</a></li>
+<li><a href="https://github.com/iclanzan/slinky" target="_blank" rel="external">Slinky.js - 堆叠头部创建滑动导航列表</a></li>
+<li><a href="http://wicky.nillia.ms/headroom.js/" target="_blank" rel="external">Headroom.js</a></li>
+<li><a href="http://janpaepke.github.io/ScrollMagic/" target="_blank" rel="external">ScrollMagic</a></li>
+<li><a href="https://github.com/yairEO/stickyfloat" target="_blank" rel="external">Sticky Float</a></li>
+<li><a href="http://mojotech.github.io/stickymojo/" target="_blank" rel="external">Sticky Mojo</a></li>
+<li><a href="https://github.com/stefangabos/Zebra_Pin" target="_blank" rel="external">Zebra Pin</a></li>
+<li><a href="https://github.com/somewebmedia/hc-sticky" target="_blank" rel="external">HC-Sticky</a></li>
+</ul>
+<h3 id="13-16-触控事件"><a href="#13-16-触控事件" class="headerlink" title="13.16 触控事件"></a>13.16 触控事件</h3><ul>
+<li><a href="https://github.com/hammerjs/hammer.js" target="_blank" rel="external">Hammer.js</a></li>
+<li><a href="https://github.com/stephband/jquery.event.move" target="_blank" rel="external">jquery.event.move.js</a></li>
+</ul>
+<h3 id="13-17-拖拽组件"><a href="#13-17-拖拽组件" class="headerlink" title="13.17 拖拽组件"></a>13.17 拖拽组件</h3><ul>
+<li><a href="https://github.com/desandro/draggabilly" target="_blank" rel="external">Draggabilly - 专注于拖拽功能的 JS 库</a></li>
+</ul>
+<h3 id="13-18-隐藏或展示页面元素"><a href="#13-18-隐藏或展示页面元素" class="headerlink" title="13.18 隐藏或展示页面元素"></a>13.18 隐藏或展示页面元素</h3><ul>
+<li><a href="http://www.bootcss.com/p/headroom.js/" target="_blank" rel="external">Headroom.js - 在不需要页头时将其隐藏</a></li>
+<li><a href="https://github.com/jedfoster/Readmore.js" target="_blank" rel="external">Readmore.js - 内容显示与隐藏插件</a></li>
+<li><a href="https://github.com/dmotz/oriDomi" target="_blank" rel="external">oriDomi - 像指一样折叠Dom元素</a></li>
+</ul>
+<h3 id="13-19-滚动条-Scrollbar"><a href="#13-19-滚动条-Scrollbar" class="headerlink" title="13.19 滚动条(Scrollbar)"></a>13.19 滚动条(Scrollbar)</h3><ul>
+<li><a href="http://rocha.la/jQuery-slimScroll" target="_blank" rel="external">jQuery-slimScroll pc效果不错5k,手机端不建议是用</a></li>
+<li><a href="http://manos.malihu.gr/jquery-custom-content-scroller/" target="_blank" rel="external">jquery.mCustomScrollbar pc,苹果效果不错,安卓效果略差,大小较大</a></li>
+<li><a href="https://github.com/vitch/jScrollPane" target="_blank" rel="external">jScrollPane</a></li>
+<li><a href="https://github.com/gromo/jquery.scrollbar" target="_blank" rel="external">jquery.scrollbar</a></li>
+<li><a href="https://github.com/noraesae/perfect-scrollbar" target="_blank" rel="external">perfect-scrollbar</a></li>
+<li><a href="https://github.com/jamesflorentino/nanoScrollerJS" target="_blank" rel="external">nanoScrollerJS</a></li>
+<li><a href="https://github.com/wieringen/tinyscrollbar" target="_blank" rel="external">tinyscrollbar</a></li>
+</ul>
+<h3 id="13-20-视差滚动-Parallax-Scrolling"><a href="#13-20-视差滚动-Parallax-Scrolling" class="headerlink" title="13.20 视差滚动(Parallax Scrolling)"></a>13.20 视差滚动(Parallax Scrolling)</h3><ul>
+<li><a href="http://aerolab.github.io/midnight.js/" target="_blank" rel="external">MidnightJS 效果很赞</a></li>
+<li><a href="https://github.com/wagerfield/parallax" target="_blank" rel="external">parallax.js</a></li>
+<li><a href="https://github.com/stephband/jparallax" target="_blank" rel="external">jparallax</a></li>
+<li><a href="http://codepen.io/mike-zarandona/full/Dasnw" target="_blank" rel="external">StickyStack.js</a> <a href="https://github.com/mike-zarandona/StickyStack.js" target="_blank" rel="external">-github</a></li>
+<li><a href="https://github.com/johnpolacek/superscrollorama" target="_blank" rel="external">jquery.superscrollorama.js 很酷的动画效果</a></li>
+</ul>
+<h2 id="14-代码高亮插件-代码编辑器"><a href="#14-代码高亮插件-代码编辑器" class="headerlink" title="14. 代码高亮插件/代码编辑器"></a>14. 代码高亮插件/代码编辑器</h2><ul>
+<li><a href="https://code.google.com/p/google-code-prettify/" target="_blank" rel="external">google-code-prettify</a></li>
+<li><a href="https://highlightjs.org/" target="_blank" rel="external">highlight.js</a></li>
+<li><a href="http://craig.is/making/rainbows" target="_blank" rel="external">Rainbow</a></li>
+<li><a href="https://github.com/ajaxorg/ace" target="_blank" rel="external">ACE</a></li>
+<li><a href="https://github.com/codemirror/codemirror" target="_blank" rel="external">CodeMirror</a></li>
+<li><a href="https://github.com/aramk/crayon-syntax-highlighter" target="_blank" rel="external">Crayon Syntax Highlighter</a></li>
+<li><a href="https://github.com/PrismJS/prism" target="_blank" rel="external">prism - Lightweight, robust, elegant syntax highlighting.</a></li>
+</ul>
+<h2 id="15-UI-Icon-组件"><a href="#15-UI-Icon-组件" class="headerlink" title="15. UI Icon 组件"></a>15. UI Icon 组件</h2><ul>
+<li><a href="http://fontawesome.io/icons/" target="_blank" rel="external">Font Awesome</a></li>
+<li><a href="http://glyphter.com/" target="_blank" rel="external">Glyphter: The SVG Font Machine</a></li>
+<li><a href="http://perfecticons.com/" target="_blank" rel="external">Perfect Icons</a></li>
+<li><a href="http://iconizr.com/" target="_blank" rel="external">iconizr</a></li>
+<li><a href="http://www.bootcss.com/p/cikonss/" target="_blank" rel="external">Cikonss - 纯CSS实现的响应式Icon</a></li>
+<li><a href="https://github.com/danleech/simple-icons" target="_blank" rel="external">Simple Icons</a></li>
+</ul>
+<h2 id="16-动画-Animate"><a href="#16-动画-Animate" class="headerlink" title="16. 动画(Animate)"></a>16. 动画(Animate)</h2><ul>
+<li><p>js动画库</p>
+<ul>
+<li><a href="http://greensock.com/gsap" target="_blank" rel="external">GSAP.js 最屌的动画库</a></li>
+<li><a href="https://github.com/bendc/animateplus" target="_blank" rel="external">Animate Plus  CSS/SVG 动画库</a></li>
+<li><a href="https://github.com/juliangarnier/anime" target="_blank" rel="external">anime.js 最近出的动画库,支持svg</a></li>
+<li><a href="http://dynamicsjs.com/" target="_blank" rel="external">dynamics.js js动画-很屌的样子,支持svg</a></li>
+<li><a href="http://daniel-lundin.github.io/snabbt.js/" target="_blank" rel="external">snabbt.js - 简约的JavaScript动画库</a></li>
+<li><a href="https://github.com/rstacruz/jquery.transit" target="_blank" rel="external">Transit - CSS transitions and transformations for jQuery</a></li>
+<li><a href="http://visionmedia.github.io/move.js/" target="_blank" rel="external">Move.js - 简化CSS3动画的JS库</a> - <a href="https://github.com/visionmedia/move.js" target="_blank" rel="external">github</a></li>
+<li><a href="http://labs.bigroomstudios.com/libraries/animo-js" target="_blank" rel="external">Animo.js - 堆栈动画，创建跨浏览器的模糊效果【效果不错，依赖jq】</a> - <a href="https://github.com/ThrivingKings/animo.js" target="_blank" rel="external">github</a></li>
+<li><a href="https://github.com/julianshapiro/velocity" target="_blank" rel="external">Velocity.js - 加速JavaScript动画</a></li>
+<li><a href="http://www.joelambert.co.uk/morf/" target="_blank" rel="external">Morf.js 提供了一组 JavaScript 方法用于加速 CSS3的各种转换效果，支持的方法都在上图中，无需编写 CSS3 代码。</a> -  <a href="https://github.com/joelambert/morf" target="_blank" rel="external">github</a></li>
+<li><a href="https://github.com/thomasxiii/lenticular.js" target="_blank" rel="external">lenticular.js - 响应倾斜或鼠标事件创建图片动画</a></li>
+<li><a href="https://github.com/peachananr/interactive_3d" target="_blank" rel="external">jQuery Interactive 3D - 使用图片创建一个3D模型</a></li>
+<li><a href="https://github.com/ramswaroop/animatescroll.js" target="_blank" rel="external">AnimateScroll - 动画滚动,应该是定点导航动画</a></li>
+<li><a href="http://jackrugile.com/jrumble/" target="_blank" rel="external">jq 元素抖动库</a></li>
+<li><a href="http://www.createjs.com/#!/CreateJS" target="_blank" rel="external">Tween JS  JavaScript 补间动画库 canvas</a></li>
+<li><a href="http://rekapi.com/" target="_blank" rel="external">Rekapi 关键帧动画库</a></li>
+<li><a href="http://lab.ejci.net/favico.js/" target="_blank" rel="external">favico.js v0.3.4 控制游览器标签小图标</a> - <a href="https://github.com/ejci/favico.js" target="_blank" rel="external">github</a></li>
+<li><a href="http://tholman.com/dom-animator/" target="_blank" rel="external">dom-animator -注释动画</a></li>
+</ul>
+</li>
+<li><p>css动画库</p>
+<ul>
+<li><a href="http://royjang.github.io/xless/" target="_blank" rel="external">xless - 又一个css动画库</a> <a href="https://github.com/royJang/xless" target="_blank" rel="external">github</a></li>
+<li><a href="http://elrumordelaluz.github.io/csshake/#1" target="_blank" rel="external">CSShake - css抖动库</a> - <a href="https://github.com/elrumordelaluz/csshake" target="_blank" rel="external">github</a></li>
+<li><a href="https://github.com/daneden/animate.css" target="_blank" rel="external">animate.css - css3动画库</a></li>
+<li><a href="http://clovisdasilvaneto.github.io/all-animation/" target="_blank" rel="external">all animation - 同上,有sass版本</a> - <a href="https://github.com/clovisdasilvaneto/all-animation" target="_blank" rel="external">github</a></li>
+<li><a href="http://dreamsky.github.io/main/blog/magic-css.html" target="_blank" rel="external">magic - CSS3动画特效</a> - <a href="https://github.com/miniMAC/magic" target="_blank" rel="external">gihub</a></li>
+<li><a href="https://github.com/nckprsn/scrollme" target="_blank" rel="external">ScrollMe – 在网页中加入各种滚动动画效果</a></li>
+<li><a href="http://connoratherton.com/loaders" target="_blank" rel="external">Loaders.css - css加载动画</a> - <a href="https://github.com/ConnorAtherton/loaders.css" target="_blank" rel="external"> github</a></li>
+<li><a href="https://github.com/lukehaas/css-loaders" target="_blank" rel="external">css-loaders - 同上</a></li>
+<li><a href="http://ianlunn.github.io/Hover/" target="_blank" rel="external">Hover.css</a> - <a href="https://github.com/IanLunn/Hover" target="_blank" rel="external">github</a></li>
+<li><a href="https://github.com/h5bp/Effeckt.css" target="_blank" rel="external">Effeckt.css - 手机动画库</a></li>
+<li><a href="http://nec.netease.com/library/category/#animation" target="_blank" rel="external">NEC动画库</a></li>
+<li><a href="http://uilang.com/" target="_blank" rel="external">uilang - a minimal, ui-focused programming language for web designers</a></li>
+<li><a href="https://github.com/elrumordelaluz/csshake" target="_blank" rel="external">csshake 带有sass版本</a></li>
+<li><a href="https://github.com/anijs/anijs/" target="_blank" rel="external">AniJS - 一个基于声明式语法的CSS动画库</a></li>
+<li><a href="https://github.com/tobiasahlin/SpinKit" target="_blank" rel="external">SpinKit ??</a></li>
+<li><a href="http://alloyteam.github.io/JXAnimate/" target="_blank" rel="external">JX.Animate - 腾讯css3动画库</a> - <a href="https://github.com/AlloyTeam/JXAnimate" target="_blank" rel="external">github</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="17-本地存储"><a href="#17-本地存储" class="headerlink" title="17. 本地存储"></a>17. 本地存储</h2><ul>
+<li><a href="https://github.com/zendesk/cross-storage" target="_blank" rel="external">cross-storage - Cross domain local storage</a></li>
+<li><a href="https://github.com/mozilla/localForage" target="_blank" rel="external">localForage</a></li>
+<li><a href="https://github.com/pouchdb/pouchdb" target="_blank" rel="external">pouchdb</a></li>
+<li><a href="https://github.com/Wisembly/basil.js" target="_blank" rel="external">basil.js</a></li>
+</ul>
+<h2 id="18-模板引擎"><a href="#18-模板引擎" class="headerlink" title="18. 模板引擎"></a>18. 模板引擎</h2><ul>
+<li><a href="http://cn.vuejs.org/" target="_blank" rel="external">vue.js ie9+</a></li>
+<li><a href="https://github.com/crcn/paperclip.js" target="_blank" rel="external">paperclip.js ie8+</a></li>
+<li><a href="https://github.com/janl/mustache.js" target="_blank" rel="external">mustache.js</a></li>
+<li><a href="http://www.jingwentian.com/t-66" target="_blank" rel="external">Handlebars.js</a></li>
+<li><a href="https://github.com/aui/artTemplate" target="_blank" rel="external">artTemplate</a></li>
+<li><a href="https://github.com/wangxiao/BaiduTemplate" target="_blank" rel="external">baiduTemplate</a></li>
+<li><a href="https://github.com/BorisMoore/jsrender" target="_blank" rel="external">JSRender</a></li>
+<li><a href="https://github.com/tj/ejs" target="_blank" rel="external">EJS - JavaScript Templates</a></li>
+<li><a href="https://github.com/PaulGuo/Juicer" target="_blank" rel="external">Juicer - A Light Javascript Templete Engine.</a></li>
+<li><a href="https://github.com/twigkit/tempo" target="_blank" rel="external">Tempo</a></li>
+<li><a href="https://github.com/moappi/json2html" target="_blank" rel="external">json2html</a></li>
+</ul>
+<h2 id="19-通知组件-弹框组件-模态窗口"><a href="#19-通知组件-弹框组件-模态窗口" class="headerlink" title="19. 通知组件/弹框组件/模态窗口"></a>19. 通知组件/弹框组件/模态窗口</h2><ul>
+<li><a href="http://sentsin.com/jquery/layer/" target="_blank" rel="external">layer.js - 国产,也是集成很多功能,个人推荐</a></li>
+<li><a href="http://joaopereirawd.github.io/animatedModal.js/" target="_blank" rel="external">AnimatedModal.js - CSS3  全屏模态窗口,支持 Firefox、Chrome、Safari、Opera 和 IE 10+</a></li>
+<li><a href="https://github.com/fabien-d/alertify.js" target="_blank" rel="external">alertify.js</a></li>
+<li><a href="https://github.com/MohammadYounes/AlertifyJS" target="_blank" rel="external">AlertifyJS</a></li>
+<li><a href="https://github.com/t4t5/sweetalert" target="_blank" rel="external">SweetAlert</a></li>
+<li><a href="https://github.com/HubSpot/messenger" target="_blank" rel="external">Messenger - 非常酷的弹框组件</a></li>
+<li><a href="https://github.com/sciactive/pnotify" target="_blank" rel="external">PNotify</a></li>
+<li><a href="https://github.com/jpillora/notifyjs" target="_blank" rel="external">Notify.js - A simple, versatile notification library</a></li>
+<li><a href="https://github.com/VodkaBears/Remodal" target="_blank" rel="external">Remodal - 模态窗口插件</a></li>
+</ul>
+<h2 id="20-提示控件-Tooltips"><a href="#20-提示控件-Tooltips" class="headerlink" title="20. 提示控件(Tooltips)"></a>20. 提示控件(Tooltips)</h2><ul>
+<li><a href="https://github.com/qTip2/qTip2" target="_blank" rel="external">qTip2 - Pretty powerful tooltips</a></li>
+<li><a href="https://github.com/HubSpot/tooltip" target="_blank" rel="external">tooltip - CSS Tooltips</a></li>
+<li><a href="https://github.com/iamceege/tooltipster" target="_blank" rel="external">tooltipster - A jQuery tooltip plugin</a></li>
+<li><a href="https://github.com/jamescryer/grumble.js" target="_blank" rel="external">grumble.js - 气泡形状的提示（Tooltip）控件</a></li>
+<li><a href="https://github.com/carlsednaoui/ouibounce" target="_blank" rel="external">Ouibounce - 离站提示控件</a></li>
+</ul>
+<h2 id="21-对话框-遮罩层-弹出层-lightbox"><a href="#21-对话框-遮罩层-弹出层-lightbox" class="headerlink" title="21. 对话框/遮罩层/弹出层(lightbox)"></a>21. 对话框/遮罩层/弹出层(lightbox)</h2><ul>
+<li><a href="https://github.com/fancyapps/fancyBox" target="_blank" rel="external">fancyBox - Fancy jQuery lightbox</a></li>
+<li><a href="https://github.com/krewenki/jquery-lightbox" target="_blank" rel="external">jquery-lightbox - The popular lightbox script, ported to jQuery</a></li>
+<li><a href="https://github.com/jackmoore/colorbox" target="_blank" rel="external">Colorbox - a jQuery lightbox</a></li>
+<li><a href="https://github.com/aui/artDialog" target="_blank" rel="external">artDialog - 经典的网页对话框组件</a></li>
+<li><a href="https://github.com/codrops/DialogEffects" target="_blank" rel="external">DialogEffects</a></li>
+<li><a href="https://github.com/malsup/blockui/" target="_blank" rel="external">jQuery blockUI - Page or element overlay</a></li>
+</ul>
+<h2 id="22-文档-表格-PDF"><a href="#22-文档-表格-PDF" class="headerlink" title="22. 文档/表格/PDF"></a>22. 文档/表格/PDF</h2><ul>
+<li><a href="https://github.com/handsontable/handsontable" target="_blank" rel="external">handsontable - 在线可编辑excel表格</a></li>
+<li><a href="https://github.com/rstaib/jquery-bootgrid" target="_blank" rel="external">jQuery Bootgrid - 用于ajax生成动态表格</a></li>
+<li><a href="https://github.com/DataTables/DataTables" target="_blank" rel="external">DataTables - Table plug-in for jQuery</a></li>
+<li><a href="https://github.com/mozilla/pdf.js" target="_blank" rel="external">PDF.js - 一个 JavaScript 编写的 PDF 阅读器</a></li>
+<li><a href="https://github.com/MrRio/jsPDF" target="_blank" rel="external">jsPDF - Generate PDF files in JavaScript</a></li>
+<li><a href="https://github.com/okfn/recline/" target="_blank" rel="external">Recline.js - 灵活操作和展示数据</a></li>
+<li><a href="https://github.com/alfajango/jquery-dynatable" target="_blank" rel="external">Dynatable - 交互式表格插件</a></li>
+</ul>
+<h2 id="23-目录树插件"><a href="#23-目录树插件" class="headerlink" title="23. 目录树插件"></a>23. 目录树插件</h2><ul>
+<li><a href="https://github.com/zTree/zTree_v3" target="_blank" rel="external">zTree_v3 - jQuery Tree Plugin</a></li>
+<li><a href="https://github.com/vakata/jstree" target="_blank" rel="external">jstree - jQuery Tree Plugin</a></li>
+<li><a href="https://github.com/mar10/fancytree" target="_blank" rel="external">fancytree - Tree plugin for jQuery</a></li>
+</ul>
+<h2 id="24-Ajax模块"><a href="#24-Ajax模块" class="headerlink" title="24. Ajax模块"></a>24. Ajax模块</h2><ul>
+<li><a href="https://github.com/github/fetch" target="_blank" rel="external">fetch - A window.fetch JavaScript polyfill</a></li>
+<li><a href="https://github.com/ded/reqwest" target="_blank" rel="external">reqwest - browser asynchronous http requests</a></li>
+<li><a href="https://github.com/argunner/minAjax.js/" target="_blank" rel="external">minAjax.js</a></li>
+</ul>
+<h2 id="25-音频-视频"><a href="#25-音频-视频" class="headerlink" title="25. 音频/视频"></a>25. 音频/视频</h2><ul>
+<li><a href="http://01org.github.io/jWebAudio/" target="_blank" rel="external">jWebAudio</a></li>
+<li><a href="https://github.com/happyworm/jPlayer" target="_blank" rel="external">jPlayer -  HTML5 Audio &amp; Video for jQuery</a></li>
+<li><a href="https://github.com/videojs/video.js" target="_blank" rel="external">video.js - HTML5 &amp; Flash video player</a></li>
+<li><a href="https://github.com/paypal/accessible-html5-video-player" target="_blank" rel="external">Accessible HTML5 Video Player - PayPal 开源的 HTML5 视频播放器</a></li>
+<li><a href="https://github.com/clappr/clappr" target="_blank" rel="external">Clappr - 开源的Web视频播放器</a></li>
+<li><a href="https://github.com/selz/plyr" target="_blank" rel="external">Plyr - 简单，灵活的 HTML5 媒体播放器</a></li>
+<li><a href="https://github.com/davatron5000/FitVids.js" target="_blank" rel="external">FitVids.js - A lightweight, easy-to-use jQuery plugin for fluid width video embeds.</a></li>
+<li><a href="https://github.com/dfcb/BigVideo.js" target="_blank" rel="external">BigVideo.js - The jQuery Plugin for Big Background Video</a></li>
+<li><a href="https://github.com/bdougherty/BigScreen" target="_blank" rel="external">BigScreen - A simple library for using the JavaScript Full Screen API</a></li>
+<li><a href="https://github.com/VodkaBears/Vide" target="_blank" rel="external">Vide - 视频背景</a></li>
+<li><a href="https://github.com/captbaritone/winamp2-js" target="_blank" rel="external">winamp2-js</a></li>
+<li><a href="https://github.com/jaysalvat/buzz" target="_blank" rel="external">Buzz - A Javascript HTML5 Audio library</a></li>
+<li>[howler.js 是一个新的 JavaScript 库用于处理 Web 的音频，该库最初是为一个 HTML5 游戏引擎所开发，但也可用于其他的 Web 项目。] (<a href="https://github.com/goldfire/howler.js" target="_blank" rel="external">https://github.com/goldfire/howler.js</a>)</li>
+</ul>
+<h2 id="26-按钮"><a href="#26-按钮" class="headerlink" title="26. 按钮"></a>26. 按钮</h2><ul>
+<li><a href="https://github.com/alexwolfe/Buttons" target="_blank" rel="external">Buttons - A CSS button library</a></li>
+<li><a href="https://github.com/codrops/ButtonComponentMorph" target="_blank" rel="external">ButtonComponentMorph</a></li>
+<li><a href="https://github.com/codrops/ProgressButtonStyles" target="_blank" rel="external">ProgressButtonStyles</a></li>
+<li><a href="https://github.com/codrops/CreativeButtons" target="_blank" rel="external">CreativeButtons</a></li>
+<li><a href="https://github.com/ubuwaits/css3-buttons" target="_blank" rel="external">CSS3 buttons</a></li>
+<li><a href="https://github.com/timmywil/jquery.onoff" target="_blank" rel="external">jquery.onoff - Interactive, accessible toggle switches for the web.</a></li>
+</ul>
+<h2 id="27-富文本编辑器-Markdown编辑器-Markdown解析器"><a href="#27-富文本编辑器-Markdown编辑器-Markdown解析器" class="headerlink" title="27. 富文本编辑器/Markdown编辑器/Markdown解析器"></a>27. 富文本编辑器/Markdown编辑器/Markdown解析器</h2><ul>
+<li><a href="https://github.com/mycolorway/simditor" target="_blank" rel="external">Simditor - 简单快速的富文本编辑器</a></li>
+<li><a href="https://github.com/Integ/BachEditor" target="_blank" rel="external">BachEditor - 一个有情怀的编辑器</a></li>
+<li><a href="http://neilj.github.io/Squire/" target="_blank" rel="external">Squire – 简洁的 HTML5 富文本编辑器</a></li>
+<li><a href="https://github.com/tinymce/tinymce" target="_blank" rel="external">TinyMCE</a></li>
+<li><a href="https://github.com/toopay/bootstrap-markdown" target="_blank" rel="external">bootstrap-markdown</a></li>
+<li><a href="https://github.com/chjj/marked" target="_blank" rel="external">marked - markdown解析器</a></li>
+<li><a href="https://github.com/tylingsoft/markdown-plus" target="_blank" rel="external">Markdown Plus</a></li>
+<li><a href="https://github.com/pandao/editor.md" target="_blank" rel="external">Editor.md - 开源在线Markdown编辑器</a></li>
+</ul>
+<h2 id="28-内容提取-Readability"><a href="#28-内容提取-Readability" class="headerlink" title="28. 内容提取(Readability)"></a>28. 内容提取(Readability)</h2><ul>
+<li><a href="https://code.google.com/p/arc90labs-readability/" target="_blank" rel="external">Readability</a></li>
+<li><a href="https://github.com/marianoguerra/json.human.js" target="_blank" rel="external">json.human.js - Json Formatting for Human Beings</a></li>
+</ul>
+<h2 id="29-颜色-CSS-Colors-SVG"><a href="#29-颜色-CSS-Colors-SVG" class="headerlink" title="29. 颜色(CSS Colors)/SVG"></a>29. 颜色(CSS Colors)/SVG</h2><ul>
+<li><a href="http://colours.neilorangepeel.com/" target="_blank" rel="external">CSS Colours</a></li>
+<li><a href="http://www.svgeneration.com/" target="_blank" rel="external">SVGeneration</a></li>
+<li><a href="https://github.com/dirkgroenen/SVGMagic" target="_blank" rel="external">SVGMagic - 自动的创建PNG来兼容不支持SVG的浏览器</a></li>
+<li><a href="https://github.com/briangonzalez/jquery.adaptive-backgrounds.js" target="_blank" rel="external">Adaptive Backgrounds - 从图片抽取主要颜色和应用到父元素</a></li>
+</ul>
+<h2 id="30-选项卡-Tabs"><a href="#30-选项卡-Tabs" class="headerlink" title="30. 选项卡(Tabs)"></a>30. 选项卡(Tabs)</h2><ul>
+<li><a href="https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion" target="_blank" rel="external">Easy Responsive Tabs to Accordion</a></li>
+<li><a href="https://github.com/jellekralt/Responsive-Tabs" target="_blank" rel="external">Responsive-Tabs</a></li>
+<li><a href="https://github.com/IonDen/ion.tabs" target="_blank" rel="external">ion.tabs - jQuery tabs plugin</a></li>
+<li><a href="https://github.com/JangoSteve/jQuery-EasyTabs" target="_blank" rel="external">jQuery-EasyTabs</a></li>
+</ul>
+<h2 id="31-文本处理"><a href="#31-文本处理" class="headerlink" title="31. 文本处理"></a>31. 文本处理</h2><ul>
+<li><a href="https://github.com/zeroclipboard/zeroclipboard" target="_blank" rel="external">ZeroClipboard - 文本复制插件</a></li>
+<li><a href="https://github.com/lemonmade/bigfoot" target="_blank" rel="external">Bigfoot - 点击文章中的脚注弹窗显示</a></li>
+<li><a href="https://github.com/openannotation/annotator" target="_blank" rel="external">Annotator - 文本注解插件，可以包括注释、标签、用户等</a></li>
+<li><a href="https://github.com/micjamking/Succinct" target="_blank" rel="external">Succinct - 用作截断多行文本,后面添加省略号</a></li>
+<li><a href="https://github.com/simplefocus/FlowType.JS" target="_blank" rel="external">Flowtype.js - 自动调整字体大小和行号</a></li>
+<li><a href="https://github.com/peachananr/flat-shadow" target="_blank" rel="external">flat-shadow</a></li>
+<li><a href="https://github.com/davatron5000/FitText.js" target="_blank" rel="external">FitText - A jQuery plugin for inflating web type</a></li>
+<li><a href="http://cmsauve.com/projects/squishy/" target="_blank" rel="external">Squishy 是一个jQuery插件，它能自动调整文字，准确地对其各容器</a></li>
+<li><a href="http://freqdec.github.io/slabText/" target="_blank" rel="external">slabText 一个jQuery插件，用于创建大的，大胆的和敏感的头条新闻。</a></li>
+<li><a href="http://jschr.github.io/textillate/" target="_blank" rel="external">Textillate 做CSS3文字动画。</a></li>
+<li><a href="http://baconforme.com/" target="_blank" rel="external">Bacon 是一个jQuery插件，它允许您环绕贝塞尔曲线文字或线条，它可以让您的文字沿贝塞尔曲线排列。</a></li>
+<li><a href="http://circletype.labwire.ca/" target="_blank" rel="external">Circletype.js 是一个很小的（ 2.7kb ）的jQuery插件，可以让你的字体在一个圆圈内显示。</a></li>
+<li><a href="http://www.jwf.us/projects/jQSlickWrap/" target="_blank" rel="external">jQSlickWrap 是一个jQuery插件，让您可以轻松而准确地环绕浮动图像里的内容文字。</a></li>
+<li><a href="http://typebutter.com/" target="_blank" rel="external">TypeButter 使您能为您的字体设置透明度和字间距。</a></li>
+</ul>
+<h2 id="32-布局-Layout"><a href="#32-布局-Layout" class="headerlink" title="32. 布局(Layout)"></a>32. 布局(Layout)</h2><ul>
+<li>分隔面板(Split Panel)<ul>
+<li><a href="https://github.com/shagstrom/split-pane" target="_blank" rel="external">split-pane</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="33-实用工具-其他插件"><a href="#33-实用工具-其他插件" class="headerlink" title="33. 实用工具/其他插件"></a>33. 实用工具/其他插件</h2><ul>
+<li><a href="https://github.com/carhartl/jquery-cookie" target="_blank" rel="external">jquery-cookie</a></li>
+<li><a href="https://github.com/ftlabs/fastclick" target="_blank" rel="external">FastClick - 处理移动端 click 事件 300 毫秒延迟</a></li>
+<li><a href="https://github.com/caolan/async" target="_blank" rel="external">Async.js - 异步操作</a></li>
+<li><a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="external">html2canvas - 实现纯JS网页截图</a></li>
+<li><a href="https://github.com/jeromeetienne/jquery-qrcode" target="_blank" rel="external">jquery.qrcode.js - 生成二维码的 jQuery 插件</a></li>
+<li><a href="https://github.com/platform45/nakedpassword" target="_blank" rel="external">nakedpassword - 用脱衣女帮助检测密码强度</a></li>
+<li><a href="https://github.com/fex-team/kityminder" target="_blank" rel="external">KityMinder - 脑图编辑工具</a></li>
+<li><a href="https://github.com/patrickkunka/mixitup" target="_blank" rel="external">MixitUp - 动画过滤和排序</a></li>
+<li><a href="https://github.com/peachananr/tip_cards" target="_blank" rel="external">JQuery Tip Cards - 创建卡片交互的cards布局</a></li>
+<li><a href="https://github.com/dolox/fallback/" target="_blank" rel="external">Fallback.js - JavaScript library for dynamically loading CSS and JS files.</a></li>
+<li><a href="https://github.com/swfobject/swfobject" target="_blank" rel="external">swfobject</a></li>
+</ul>
+<h2 id="34-sass-库"><a href="#34-sass-库" class="headerlink" title="34. sass 库"></a>34. sass 库</h2><ul>
+<li><a href="http://lukyvj.github.io/family.scss/" target="_blank" rel="external">Family.scss - css3选择器简写框架,非常不错</a></li>
+<li><a href="http://spacebase.space150.com/" target="_blank" rel="external">SpaceBase – 基于 Sass 的响应式 CSS 框架</a> - <a href="https://github.com/space150/spaceBase" target="_blank" rel="external">github</a></li>
+<li><a href="http://breakpoint-sass.com/" target="_blank" rel="external">breakpoint-sass 媒体查询库</a></li>
+<li><a href="http://include-media.com/" target="_blank" rel="external">@include-media diy媒体查询库</a></li>
+<li><a href="https://github.com/paranoida/sass-mediaqueries" target="_blank" rel="external">sass-mediaqueries 媒体查询库-推荐</a> -<a href="http://paranoida.github.io/sass-mediaqueries/demo.html" target="_blank" rel="external">demo</a></li>
+<li><a href="https://github.com/sass-mq/sass-mq" target="_blank" rel="external">sass-mq Media Queries with superpowers-em单位媒体查询库</a> </li>
+</ul>
+<h2 id="34-1-分页"><a href="#34-1-分页" class="headerlink" title="34.1 分页"></a>34.1 分页</h2><ul>
+<li><a href="https://github.com/beneverard/jqPagination" target="_blank" rel="external">jqPagination 分页插件</a></li>
+</ul>
+<h2 id="35-未知分类"><a href="#35-未知分类" class="headerlink" title="35. 未知分类"></a>35. 未知分类</h2><ul>
+<li><a href="http://maroslaw.github.io/rainyday.js/" target="_blank" rel="external">Rainyday.js - 实现雨滴效果</a></li>
+<li><a href="https://github.com/hakimel/reveal.js/" target="_blank" rel="external">Reveal.JS - 替代PPT,演示文稿。</a></li>
+<li><a href="http://jnordberg.github.io/gif.js/" target="_blank" rel="external">Gif.JS 是一个能运行在你的浏览器中的JavaScript GIF编码器。</a></li>
+<li><a href="http://madebymany.github.io/sir-trevor-js/" target="_blank" rel="external">Sir Trevor是一个会完全重绘网页内容的工具：直观的编辑网页内容而不用假定任何关于它是如何重绘的事。</a></li>
+<li><a href="http://featurejs.com/" target="_blank" rel="external">feature.js 检测浏览器是否支持某属性</a></li>
+<li><a href="http://mockjs.com/" target="_blank" rel="external">Mock.js 生成随机数据,拦截ajax</a></li>
+<li><a href="http://tympanus.net/Development/BookPreview/" target="_blank" rel="external">BookBlock 翻书特效</a> - <a href="https://github.com/codrops/BookBlock" target="_blank" rel="external">github</a></li>
+<li><a href="https://github.com/usablica/intro.js" target="_blank" rel="external">intro.js 引导用户页面</a></li>
+<li><a href="http://una.im/CSSgram/" target="_blank" rel="external">CSS滤镜 CSSgram</a></li>
+<li><a href="http://www.transformicons.com/" target="_blank" rel="external">Transformicons - CSS/SVG 元素模拟 图标/符号动画-过渡</a></li>
+<li><a href="http://ilyashubin.github.io/FilterBlend/" target="_blank" rel="external">CSS 滤镜在线调试</a></li>
+<li><a href="https://github.com/evanw/glfx.js" target="_blank" rel="external">glfx.js canvas图片处理滤镜</a></li>
+<li><a href="http://riccardoscalco.github.io/crayon/" target="_blank" rel="external">Crayon.css CSS颜色变量名与16进制对应列表。</a></li>
+<li><a href="http://sarasoueidan.com/tools/circulus/" target="_blank" rel="external">SVG圆形菜单生成器</a></li>
+<li><a href="https://jakearchibald.github.io/svgomg/" target="_blank" rel="external">优化和配置SVGO的WEB应用</a></li>
+<li><a href="http://katydecorah.com/css-ruler/" target="_blank" rel="external">CSS单位对比视图</a></li>
+<li><a href="http://anthonydugois.com/svg-path-builder/" target="_blank" rel="external">使用GUI快速创建SVG path</a></li>
+<li><a href="http://css2sass.herokuapp.com/" target="_blank" rel="external">把CSS代码转成SASS的应用</a></li>
+<li><a href="http://resizr.co/" target="_blank" rel="external">resizr 测试  CSS media queries 的轻量级应用-需要线上地址,没有线上地址,可以搞个coding-git</a></li>
+<li><a href="http://yanshuo.io/" target="_blank" rel="external">在线ppt</a></li>
+<li><a href="http://web.flash2x.org/" target="_blank" rel="external">flash文件转 canvas - Flash2x Tool</a> <a href="http://www.annie2x.com/docs/" target="_blank" rel="external">http://www.annie2x.com/docs/</a></li>
+<li><a href="https://github.com/DevExpress/testcafe" target="_blank" rel="external">testcafe 浏览器测试工具-类似(测试单元工具)</a><h2 id="36-Canvas库"><a href="#36-Canvas库" class="headerlink" title="36. Canvas库"></a>36. Canvas库</h2><ul>
+<li><a href="https://github.com/caleb531/jcanvas" target="_blank" rel="external">jCanvas - 语法简单实现canvas的js 库</a></li>
+<li><a href="http://www.createjs.cc/" target="_blank" rel="external">create.js </a> </li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="前端参考集"><a href="#前端参考集" class="headerlink" title="前端参考集"></a>前端参考集</h2><ul>
+<li><a href="https://github.com/bendc/frontend-guidelines" target="_blank" rel="external">frontend-guidelines - Some HTML, CSS and JS best practices.</a></li>
+<li><a href="https://github.com/codrops" target="_blank" rel="external">Codrops - Useful resources</a></li>
+<li><a href="http://isobar-idev.github.io/code-standards/" target="_blank" rel="external">Front-end Code Standards &amp; Best Practices</a></li>
+<li><a href="https://github.com/dypsilon/frontend-dev-bookmarks" target="_blank" rel="external">frontend-dev-bookmarks</a></li>
+<li><a href="https://github.com/airbnb/javascript" target="_blank" rel="external">Airbnb 的 JavaScript 编码规范</a></li>
+<li><a href="http://nexts.github.io/Clusterize.js/" target="_blank" rel="external">Clusterize.js 可以优化你的大型数据表格的性能</a><br>还有一大波干货待整理…</li>
+</ul>
+<hr>
+<p>欢迎分享你的好东西给我</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="小鳥依家 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="小鳥依家 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/13/nodejs/" rel="next" title="手把手告诉你如何安装多个版本的node">
+                <i class="fa fa-chevron-left"></i> 手把手告诉你如何安装多个版本的node
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/11/react/" rel="prev" title="react">
+                react <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/a.jpg"
+               alt="小鳥依家" />
+          <p class="site-author-name" itemprop="name">小鳥依家</p>
+           
+              <p class="site-description motion-element" itemprop="description">今天你足够努力了吗!?</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一些前端开发的干货"><span class="nav-number">1.</span> <span class="nav-text">一些前端开发的干货</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#出处-https-coding-net-u-f2e-p-Books-git-tree-master-E7-A7-BB-E5-8A-A8Web"><span class="nav-number">1.0.1.</span> <span class="nav-text">出处:https://coding.net/u/f2e/p/Books/git/tree/master/%E7%A7%BB%E5%8A%A8Web</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包含pc端-移动端js库-框架-css框架-工具等等…在原文基础上添加修改"><span class="nav-number">1.0.2.</span> <span class="nav-text">包含pc端,移动端js库,框架,css框架,工具等等…在原文基础上添加修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用库查询系统"><span class="nav-number">1.1.</span> <span class="nav-text">常用库查询系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用库查询系统2-迷你库"><span class="nav-number">1.2.</span> <span class="nav-text">常用库查询系统2 - 迷你库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展库"><span class="nav-number">1.2.1.</span> <span class="nav-text">扩展库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档"><span class="nav-number">1.2.2.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端资料"><span class="nav-number">1.2.3.</span> <span class="nav-text">移动端资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习资料-文章"><span class="nav-number">1.2.4.</span> <span class="nav-text">学习资料/文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#书籍资料"><span class="nav-number">1.2.5.</span> <span class="nav-text">书籍资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系列文章"><span class="nav-number">1.2.6.</span> <span class="nav-text">系列文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他工具"><span class="nav-number">1.2.7.</span> <span class="nav-text">其他工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端组件库"><span class="nav-number">1.2.8.</span> <span class="nav-text">前端组件库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手势库"><span class="nav-number">1.3.</span> <span class="nav-text">手势库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-ui组件库"><span class="nav-number">1.4.</span> <span class="nav-text">vue ui组件库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端自动化-Workflow"><span class="nav-number">1.5.</span> <span class="nav-text">前端自动化(Workflow)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前端框架-Frameworks"><span class="nav-number">1.6.</span> <span class="nav-text">1. 前端框架(Frameworks)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-JavaScript-框架汇总"><span class="nav-number">1.7.</span> <span class="nav-text">2. JavaScript 框架汇总</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-前端游戏框架-动画引擎"><span class="nav-number">1.8.</span> <span class="nav-text">3. 前端游戏框架(动画引擎)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-ui组件库"><span class="nav-number">1.9.</span> <span class="nav-text">4. ui组件库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-基础模版"><span class="nav-number">1.10.</span> <span class="nav-text">5. 基础模版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-排版"><span class="nav-number">1.11.</span> <span class="nav-text">6. 排版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-网格系统"><span class="nav-number">1.12.</span> <span class="nav-text">7. 网格系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-HTML5-API-应用"><span class="nav-number">1.13.</span> <span class="nav-text">8. HTML5 API 应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-UA-识别"><span class="nav-number">1.14.</span> <span class="nav-text">9. UA 识别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-表单处理"><span class="nav-number">1.15.</span> <span class="nav-text">10. 表单处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-表单验证-Form-Validator-表单提示"><span class="nav-number">1.15.1.</span> <span class="nav-text">10.1 表单验证(Form Validator)/表单提示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-lt-select-gt-相关"><span class="nav-number">1.15.2.</span> <span class="nav-text">10.2 < select > 相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-单选框-复选框相关"><span class="nav-number">1.15.3.</span> <span class="nav-text">10.3 单选框/复选框相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-4-上传组件"><span class="nav-number">1.15.4.</span> <span class="nav-text">10.4 上传组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-5-日期选择"><span class="nav-number">1.15.5.</span> <span class="nav-text">10.5 日期选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-6-取色"><span class="nav-number">1.15.6.</span> <span class="nav-text">10.6 取色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-7-标签插件-Tag"><span class="nav-number">1.15.7.</span> <span class="nav-text">10.7 标签插件(Tag)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-8-自动完成插件"><span class="nav-number">1.15.8.</span> <span class="nav-text">10.8 自动完成插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-9-样式修正"><span class="nav-number">1.15.9.</span> <span class="nav-text">10.9 样式修正</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-图表绘制-图形库-Graphics"><span class="nav-number">1.16.</span> <span class="nav-text">11. 图表绘制/图形库(Graphics)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-日期格式化"><span class="nav-number">1.17.</span> <span class="nav-text">12. 日期格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-页面交互"><span class="nav-number">1.18.</span> <span class="nav-text">13. 页面交互</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#13-1-Slider"><span class="nav-number">1.18.1.</span> <span class="nav-text">13.1 Slider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-2-瀑布流"><span class="nav-number">1.18.2.</span> <span class="nav-text">13.2 瀑布流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-3-懒加载-加载监听-预加载"><span class="nav-number">1.18.3.</span> <span class="nav-text">13.3 懒加载/加载监听/预加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-4-图片轮播-幻灯片-图片展示"><span class="nav-number">1.18.4.</span> <span class="nav-text">13.4 图片轮播(幻灯片)/图片展示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-5-图片剪裁-图片处理"><span class="nav-number">1.18.5.</span> <span class="nav-text">13.5 图片剪裁/图片处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-6-进度条-加载动画-Loading"><span class="nav-number">1.18.6.</span> <span class="nav-text">13.6 进度条/加载动画(Loading)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-7-侧滑插件-offcancas"><span class="nav-number">1.18.7.</span> <span class="nav-text">13.7 侧滑插件(offcancas)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-8-菜单-Menu"><span class="nav-number">1.18.8.</span> <span class="nav-text">13.8 菜单(Menu)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-9-滚动侦测-ScrollSpy"><span class="nav-number">1.18.9.</span> <span class="nav-text">13.9 滚动侦测(ScrollSpy)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-10-滚动加载更多-下拉刷新-Pull-to-Refresh"><span class="nav-number">1.18.10.</span> <span class="nav-text">13.10 滚动加载更多/下拉刷新(Pull to Refresh)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-11-平滑滚动插件-Smooth-Scroll"><span class="nav-number">1.18.11.</span> <span class="nav-text">13.11 平滑滚动插件(Smooth Scroll)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-12-全屏滚动-全屏切换"><span class="nav-number">1.18.12.</span> <span class="nav-text">13.12 全屏滚动/全屏切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-13-分屏滚动"><span class="nav-number">1.18.13.</span> <span class="nav-text">13.13 分屏滚动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-14-转场效果"><span class="nav-number">1.18.14.</span> <span class="nav-text">13.14 转场效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-15-固定元素-Sticky"><span class="nav-number">1.18.15.</span> <span class="nav-text">13.15 固定元素(Sticky)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-16-触控事件"><span class="nav-number">1.18.16.</span> <span class="nav-text">13.16 触控事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-17-拖拽组件"><span class="nav-number">1.18.17.</span> <span class="nav-text">13.17 拖拽组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-18-隐藏或展示页面元素"><span class="nav-number">1.18.18.</span> <span class="nav-text">13.18 隐藏或展示页面元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-19-滚动条-Scrollbar"><span class="nav-number">1.18.19.</span> <span class="nav-text">13.19 滚动条(Scrollbar)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-20-视差滚动-Parallax-Scrolling"><span class="nav-number">1.18.20.</span> <span class="nav-text">13.20 视差滚动(Parallax Scrolling)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-代码高亮插件-代码编辑器"><span class="nav-number">1.19.</span> <span class="nav-text">14. 代码高亮插件/代码编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-UI-Icon-组件"><span class="nav-number">1.20.</span> <span class="nav-text">15. UI Icon 组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-动画-Animate"><span class="nav-number">1.21.</span> <span class="nav-text">16. 动画(Animate)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-本地存储"><span class="nav-number">1.22.</span> <span class="nav-text">17. 本地存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-模板引擎"><span class="nav-number">1.23.</span> <span class="nav-text">18. 模板引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-通知组件-弹框组件-模态窗口"><span class="nav-number">1.24.</span> <span class="nav-text">19. 通知组件/弹框组件/模态窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-提示控件-Tooltips"><span class="nav-number">1.25.</span> <span class="nav-text">20. 提示控件(Tooltips)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-对话框-遮罩层-弹出层-lightbox"><span class="nav-number">1.26.</span> <span class="nav-text">21. 对话框/遮罩层/弹出层(lightbox)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-文档-表格-PDF"><span class="nav-number">1.27.</span> <span class="nav-text">22. 文档/表格/PDF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-目录树插件"><span class="nav-number">1.28.</span> <span class="nav-text">23. 目录树插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-Ajax模块"><span class="nav-number">1.29.</span> <span class="nav-text">24. Ajax模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25-音频-视频"><span class="nav-number">1.30.</span> <span class="nav-text">25. 音频/视频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26-按钮"><span class="nav-number">1.31.</span> <span class="nav-text">26. 按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27-富文本编辑器-Markdown编辑器-Markdown解析器"><span class="nav-number">1.32.</span> <span class="nav-text">27. 富文本编辑器/Markdown编辑器/Markdown解析器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28-内容提取-Readability"><span class="nav-number">1.33.</span> <span class="nav-text">28. 内容提取(Readability)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29-颜色-CSS-Colors-SVG"><span class="nav-number">1.34.</span> <span class="nav-text">29. 颜色(CSS Colors)/SVG</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30-选项卡-Tabs"><span class="nav-number">1.35.</span> <span class="nav-text">30. 选项卡(Tabs)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#31-文本处理"><span class="nav-number">1.36.</span> <span class="nav-text">31. 文本处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#32-布局-Layout"><span class="nav-number">1.37.</span> <span class="nav-text">32. 布局(Layout)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#33-实用工具-其他插件"><span class="nav-number">1.38.</span> <span class="nav-text">33. 实用工具/其他插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#34-sass-库"><span class="nav-number">1.39.</span> <span class="nav-text">34. sass 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#34-1-分页"><span class="nav-number">1.40.</span> <span class="nav-text">34.1 分页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#35-未知分类"><span class="nav-number">1.41.</span> <span class="nav-text">35. 未知分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#36-Canvas库"><span class="nav-number">1.42.</span> <span class="nav-text">36. Canvas库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端参考集"><span class="nav-number">1.43.</span> <span class="nav-text">前端参考集</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鳥依家</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "dcbbeb86db9a445fa2d41eed4e5da6f2",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("gnW1qdaB0A8IuuhYL0nv0GfD-gzGzoHsz", "7rlhnS8S5bti9GaH1CzM1kv2");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
